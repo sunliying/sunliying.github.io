@@ -1,7 +1,7 @@
 body {
     width: 700px;
     margin: 0px auto;
-    background-color: #f9f9f9;
+    background-color: #f8f8f8;
 }
 
 .box1 {
@@ -23,7 +23,7 @@ li a:hover {
 .box1 .descripion {
     float: right;
     width: 318px;
-    padding: 35px 40px;
+    padding: 14px 40px;
 }
 
 .box1 .descripion .name {
