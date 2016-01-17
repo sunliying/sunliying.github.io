@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="选取元素  过滤元素," />
 
 
 
@@ -57,41 +57,23 @@
 
 
 
-<meta name="description" content="1. jQuery 的 ready 和  window 的 load
-load事件只能被编写一次，而ready事件是可以在文档中被定义多次的。
-他们生成的时间不同。
-浏览器端是不能直接 require(‘ jquery ‘)，这是在node服务器端的commenjs规范
-
-2. 选择元素和过滤元素1.直接用选择器进行选择2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。
-类">
+<meta name="description" content="这时一篇关于jQuery的选取和过滤元素的文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery学习之选取和过滤元素">
+<meta property="og:title" content="jQuery学习：选取和过滤元素">
 <meta property="og:url" content="http://yoursite.com/2016/01/17/jQuery学习之选取和过滤元素/index.html">
 <meta property="og:site_name" content="Sunly">
-<meta property="og:description" content="1. jQuery 的 ready 和  window 的 load
-load事件只能被编写一次，而ready事件是可以在文档中被定义多次的。
-他们生成的时间不同。
-浏览器端是不能直接 require(‘ jquery ‘)，这是在node服务器端的commenjs规范
-
-2. 选择元素和过滤元素1.直接用选择器进行选择2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。
-类">
-<meta property="og:updated_time" content="2016-01-17T10:37:38.404Z">
+<meta property="og:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta property="og:updated_time" content="2016-01-17T11:33:47.904Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery学习之选取和过滤元素">
-<meta name="twitter:description" content="1. jQuery 的 ready 和  window 的 load
-load事件只能被编写一次，而ready事件是可以在文档中被定义多次的。
-他们生成的时间不同。
-浏览器端是不能直接 require(‘ jquery ‘)，这是在node服务器端的commenjs规范
-
-2. 选择元素和过滤元素1.直接用选择器进行选择2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。
-类">
+<meta name="twitter:title" content="jQuery学习：选取和过滤元素">
+<meta name="twitter:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -102,7 +84,7 @@ load事件只能被编写一次，而ready事件是可以在文档中被定义�
   };
 </script>
 
-  <title> jQuery学习之选取和过滤元素 | Sunly </title>
+  <title> jQuery学习：选取和过滤元素 | Sunly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -163,6 +145,26 @@ load事件只能被编写一次，而ready事件是可以在文档中被定义�
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -179,6 +181,16 @@ load事件只能被编写一次，而ready事件是可以在文档中被定义�
               <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
             
             標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -222,7 +234,7 @@ load事件只能被编写一次，而ready事件是可以在文档中被定义�
             
             
               
-                jQuery学习之选取和过滤元素
+                jQuery学习：选取和过滤元素
               
             
           </h1>
@@ -234,11 +246,30 @@ load事件只能被编写一次，而ready事件是可以在文档中被定义�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-01-17T18:37:38+08:00" content="2016-01-17">
+            <time itemprop="dateCreated" datetime="2016-01-17T19:33:47+08:00" content="2016-01-17">
               2016-01-17
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/jQuery学习/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -382,6 +413,12 @@ $(this).unbind(&quot;click&quot;,sun);
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/选取元素-过滤元素/" rel="tag">#选取元素  过滤元素</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -467,15 +504,15 @@ $(this).unbind(&quot;click&quot;,sun);
           </div>
 
           <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">0</span>
+            <a href="/categories">
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">分類</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
@@ -543,7 +580,7 @@ $(this).unbind(&quot;click&quot;,sun);
 <div class="theme-info">
   主題 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
