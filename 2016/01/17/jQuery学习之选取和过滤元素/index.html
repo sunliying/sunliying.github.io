@@ -39,6 +39,12 @@
     
       <li><a href="/archives">Archives</a></li>
     
+      <li><a href="//categories">categories</a></li>
+    
+      <li><a href="//about">about</a></li>
+    
+      <li><a href="//tags">tags</a></li>
+    
   </ul>
   <div class="clearfix"></div>
 </nav>
@@ -51,7 +57,7 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-01-17T07:34:19.366Z"><a href="/2016/01/17/jQuery学习之选取和过滤元素/">2016-01-17</a></time>
+        <time datetime="2016-01-17T07:37:34.276Z"><a href="/2016/01/17/jQuery学习之选取和过滤元素/">2016-01-17</a></time>
       
       
   
@@ -61,7 +67,7 @@
     </header>
     <div class="entry">
       
-        <h2 id="title_3A_jQuery_u5B66_u4E60_u4E4B_u9009_u53D6_u548C_u8FC7_u6EE4_u5143_u7D20"><a href="#title_3A_jQuery_u5B66_u4E60_u4E4B_u9009_u53D6_u548C_u8FC7_u6EE4_u5143_u7D20" class="headerlink" title="title: jQuery学习之选取和过滤元素"></a>title: jQuery学习之选取和过滤元素 </h2><h2 id="date_3A_2016_uFF1A01_uFF1A17"><a href="#date_3A_2016_uFF1A01_uFF1A17" class="headerlink" title="date: 2016：01：17"></a>date: 2016：01：17  </h2><h2 id="categories_3A_jQuery_u5B66_u4E60"><a href="#categories_3A_jQuery_u5B66_u4E60" class="headerlink" title="categories: jQuery学习"></a>categories: jQuery学习   </h2><h2 id="tags_3A_jQuery__u9009_u53D6__u8FC7_u6EE4"><a href="#tags_3A_jQuery__u9009_u53D6__u8FC7_u6EE4" class="headerlink" title="tags: jQuery 选取 过滤"></a>tags: jQuery 选取 过滤  </h2><h2 id="1-_jQuery__u7684_ready__u548C_window__u7684_load"><a href="#1-_jQuery__u7684_ready__u548C_window__u7684_load" class="headerlink" title="1. jQuery 的 ready 和  window 的 load"></a>1. jQuery 的 ready 和  window 的 load</h2><ul>
+        <h2 id="title_3A_jQuery_u5B66_u4E60_u4E4B_u9009_u53D6_u548C_u8FC7_u6EE4_u5143_u7D20"><a href="#title_3A_jQuery_u5B66_u4E60_u4E4B_u9009_u53D6_u548C_u8FC7_u6EE4_u5143_u7D20" class="headerlink" title="title: jQuery学习之选取和过滤元素"></a>title: jQuery学习之选取和过滤元素 </h2><h2 id="1-_jQuery__u7684_ready__u548C_window__u7684_load"><a href="#1-_jQuery__u7684_ready__u548C_window__u7684_load" class="headerlink" title="1. jQuery 的 ready 和  window 的 load"></a>1. jQuery 的 ready 和  window 的 load</h2><ul>
 <li>load事件只能被编写一次，而ready事件是可以在文档中被定义多次的。</li>
 </ul>
 <ul>
@@ -103,41 +109,43 @@ has(&quot;&quot;)
 <ul>
 <li>2.》注意返回值   用<code>$(this).html();</code>  <code>$(this).val();</code>     是调用一个函数，而不是直接返回html或者value</li>
 <li>3.》map选出的是一组集合，既选出的元素可以是一个利表中的值，属性或者css的样式等，比其他的选择范围要宽广，不是选择器。</li>
-<li><p>4.》除了hasClass（）中写class的名称，还有map（）中写入函数返回相应的一个集合，还有  filter（）中写入一个函数返回真假值，其余的都是些表达式，即选择器的写法。</p>
-<h2 id="u4EE3_u7801_u590D_u4E60"><a href="#u4EE3_u7801_u590D_u4E60" class="headerlink" title="代码复习"></a>代码复习</h2><p>window.onload = function(){<br>var node = document.getElementsByTagName(‘input’)[0];<br>var p = document.getElementsByTagName(‘p’)[0];<br>var i = 1;<br>do {</p>
-<pre><code>if( addEventListener ){
-    node.addEventListener(&quot;click&quot;,function(){
-        p.innerHTML += &apos;&lt;br/&gt;(&apos; + i++ + &apos;)&apos; + this.nodeName;
-         // 在这个事件中就移除事件，事件只会执行一次
-        this.removeEventListener(&quot;click&quot;,arguments.callee,false); 
-    },false);
-}else{
-    node.attachEvent(&quot;onclick&quot;,(function(node){
-        return    function(){
-                     p.innerHTML += &apos;&lt;br/&gt;(&apos; + i++ + &apos;)&apos; + node.nodeName;
-                     node.detachEvent(&quot;onclick&quot;,arguments.callee);
-                };
-</code></pre></li>
+<li>4.》除了hasClass（）中写class的名称，还有map（）中写入函数返回相应的一个集合，还有  filter（）中写入一个函数返回真假值，其余的都是些表达式，即选择器的写法。<h2 id="u4EE3_u7801_u590D_u4E60"><a href="#u4EE3_u7801_u590D_u4E60" class="headerlink" title="代码复习"></a>代码复习</h2></li>
 </ul>
+<p>window.onload = function(){</p>
+<pre><code>var node = document.getElementsByTagName(&apos;input&apos;)[0];
+var p = document.getElementsByTagName(&apos;p&apos;)[0];
+var i = 1;
+do {
+    if( addEventListener ){
+        node.addEventListener(&quot;click&quot;,function(){
+            p.innerHTML += &apos;&lt;br/&gt;(&apos; + i++ + &apos;)&apos; + this.nodeName;
+             // 在这个事件中就移除事件，事件只会执行一次
+            this.removeEventListener(&quot;click&quot;,arguments.callee,false); 
+        },false);
+    }else{
+        node.attachEvent(&quot;onclick&quot;,(function(node){
+            return    function(){
+                         p.innerHTML += &apos;&lt;br/&gt;(&apos; + i++ + &apos;)&apos; + node.nodeName;
+                         node.detachEvent(&quot;onclick&quot;,arguments.callee);
+                    }；
+        }(node)));    //这样写已经不支持了，即使在IE中也无法显示；
+    }
+    node = node.parentNode;
+}while(node);
+
+//  使用event，返回event类型
+node.onclick = function(){
+    var event = window.event || event ;
+    node.value = event.type;
+};
+node.ondblclick = function(){
+    var event = window.event || event;
+    node.value = event.type;
+};
+</code></pre><p>};</p>
 </li>
 </ul>
-<pre><code>            }(node)));    //这样写已经不支持了，即使在IE中也无法显示；
-        }
-        node = node.parentNode;
-    }while(node);
-
-    //  使用event，返回event类型
-    node.onclick = function(){
-        var event = window.event || event ;
-        node.value = event.type;
-    };
-    node.ondblclick = function(){
-        var event = window.event || event;
-        node.value = event.type;
-    };
-
-};
-</code></pre><h3 id="u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE"><a href="#u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE" class="headerlink" title="当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回"></a><strong>当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回</strong></h3><p>若是使用当前变量如下：</p>
+<h3 id="u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE"><a href="#u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE" class="headerlink" title="当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回"></a><strong>当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回</strong></h3><p>若是使用当前变量如下：</p>
 <pre><code>var div = document.getElementsByTagName(&apos;div&apos;);
   for (var i = 0; i &lt; div.length; i++){
       div[i].onmouseover = function(){
