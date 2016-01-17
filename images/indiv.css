@@ -1,9 +1,7 @@
 body {
-    width: 1000px;
+    width: 700px;
     margin: 0px auto;
-    background: radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .15) 30%, rgba(255, 255, 255, .3) 32%, rgba(255, 255, 255, 0) 33%) 0 0, radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 17%, rgba(255, 255, 255, .43) 19%, rgba(255, 255, 255, 0) 20%) 0 110px, radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 11%, rgba(255, 255, 255, .4) 13%, rgba(255, 255, 255, 0) 14%) 130px 370px, radial-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .1) 11%, rgba(255, 255, 255, .2) 13%, rgba(255, 255, 255, 0) 14%) 0 0, linear-gradient(45deg, #a2f2aa 0%, #a2f2aa 30%, #84d2f6 70%, #006782 100%);
-    background-size: 590px 590px, 970px 970px, 740px 740px, 810px 810px, 100% 100%;
-    background-color: #dcdbd9;
+    background-color: #f9f9f9;
 }
 
 .box1 {
@@ -13,25 +11,18 @@ body {
 
 .box1 img {
     float: left;
-    width: 200px;
+    width: 176px;
     height: 295px;
     margin: 36px 32px;
     background-size: cover;
 }
-
-.box1 .descripion .get_in {
-    display: block;
-    border-radius: 3px;
-    border: solid 2px #e5f938;
-    background-color: rgba(239, 252, 129, 0.6);
-    font: bold 20px/30px "youyuan";
-    float: right;
-    margin: 10px 30px;
+li a:hover {
+    color: blue;
 }
 
 .box1 .descripion {
     float: right;
-    width: 600px;
+    width: 318px;
     padding: 35px 40px;
 }
 
@@ -40,19 +31,15 @@ body {
 }
 
 .box1 .descripion ul li {
-    font: 16px/23px "youyuan";
+    font: 18px/28px "youyuan";
 }
 
-.box2,
-.box3 ,
-.box4 {
+.box2 {
     overflow: hidden;
     padding: 30px 20px;
 }
 
-.box2 .title,
-.box3 .title ,
-.box4 .title {
+.box2 .title {
     font: 35px/50px "youyuan";
     margin: 20px 30px;
 }
@@ -60,34 +47,11 @@ body {
 .box2 span {
     display: inline-block;
     font: 20px/26px "youyuan";
-    box-shadow: 5px 4px 5px #06520d;
-    background-color: rgba(12, 241, 34, 0.5);
+    box-shadow: 5px 4px 5px #000;
+    background-color: #fff;
     border-radius: 10px 20px;
     padding: 7px 24px;
-    margin: 13px 150px;
+    margin: 13px 100px;
 }
 
-.box3 .block, .box4 .block {
-    height: 290px;
-    width: 250px;
-    margin: 30px;
-    background-color: rgba(157, 206, 240, 0.5);
-    box-shadow: 5px 4px 6px #0a3757;
-    display: inline-block;
-    vertical-align: middle;
-}
 
-.box3 .block img, .box4 .block img {
-    margin: 20px;
-    height: 146px;
-    width: 206px;
-    background-size: cover;
-}
-
-.box3 .block .dis , .box4 .block .dis {
-    font: 16px/20px "youyuan";
-    overflow: hidden;
-    text-indent: 2em;
-    padding: 10px 15px;
-    margin: 0px 2px;
-}
