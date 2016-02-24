@@ -60,10 +60,10 @@
 <meta name="description" content="这时一篇关于jQuery的选取和过滤元素的文章">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery学习：选取和过滤元素">
-<meta property="og:url" content="http://yoursite.com/2016/01/17/jQuery学习之选取和过滤元素/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/02/23/jQuery学习之选取和过滤元素/index.html">
 <meta property="og:site_name" content="Sunly">
 <meta property="og:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
-<meta property="og:updated_time" content="2016-01-17T14:04:31.256Z">
+<meta property="og:updated_time" content="2016-02-23T12:27:50.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery学习：选取和过滤元素">
 <meta name="twitter:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
@@ -236,8 +236,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-01-17T22:04:31+08:00" content="2016-01-17">
-              2016-01-17
+            <time itemprop="dateCreated" datetime="2016-02-23T20:27:50+08:00" content="2016-02-23">
+              2016-02-23
             </time>
           </span>
 
@@ -264,6 +264,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/23/jQuery学习之选取和过滤元素/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/jQuery学习之选取和过滤元素/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -281,12 +288,20 @@
       
 
       
-        <h2 id="1-_jQuery__u7684_ready__u548C_window__u7684_load"><a href="#1-_jQuery__u7684_ready__u548C_window__u7684_load" class="headerlink" title="1. jQuery 的 ready 和  window 的 load"></a>1. jQuery 的 ready 和  window 的 load</h2><ul>
-<li>load事件只能被编写一次，而ready事件是可以在文档中被定义多次的。</li>
-<li>他们生成的时间不同。</li>
-<li>浏览器端是不能直接 require(‘ jquery ‘)，这是在node服务器端的commenjs规范</li>
+        <h2 id="1-_jQuery__u7684_ready__u548C_window__u7684_load"><a href="#1-_jQuery__u7684_ready__u548C_window__u7684_load" class="headerlink" title="1. jQuery 的 ready 和  window 的 load"></a>1. jQuery 的 ready 和  window 的 load</h2><p>要了解ready和load的区别，我们首先应该了解一般浏览器渲染HTML DOM文档时的一般步骤：   </p>
+<ul>
+<li>首先，解析HTML结构；    </li>
+<li>第二，加载外部脚本和样式文件   </li>
+<li>第三，解析并执行脚本代码    </li>
+<li>第四，构造 HTML DOM模型     </li>
+<li>第五，加载外部图片等资源     </li>
+<li>第六，页面加载完毕</li>
 </ul>
-<h2 id="2-__u9009_u62E9_u5143_u7D20_u548C_u8FC7_u6EE4_u5143_u7D20"><a href="#2-__u9009_u62E9_u5143_u7D20_u548C_u8FC7_u6EE4_u5143_u7D20" class="headerlink" title="2. 选择元素和过滤元素"></a>2. 选择元素和过滤元素</h2><h3 id="1-_u76F4_u63A5_u7528_u9009_u62E9_u5668_u8FDB_u884C_u9009_u62E9"><a href="#1-_u76F4_u63A5_u7528_u9009_u62E9_u5668_u8FDB_u884C_u9009_u62E9" class="headerlink" title="1.直接用选择器进行选择"></a>1.直接用选择器进行选择</h3><h3 id="2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002"><a href="#2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002" class="headerlink" title="2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。"></a>2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。</h3><ul>
+<ol>
+<li>在js中，load事件只能被编写一次，而ready事件是可以在文档中被定义多次的。</li>
+<li>他们生成的时间不同，ready事件是在HTML DOM模型构建完成之后就开始执行的，而load事件是在页面完全加载完毕之后才开始执行的。</li>
+</ol>
+<h2 id="2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002"><a href="#2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002" class="headerlink" title="2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。"></a>2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。</h2><ul>
 <li><p>类过滤<br>if($(this).hasClass(‘re’))</p>
 </li>
 <li><p>下标过滤<br> eq(0)  </p>
@@ -317,54 +332,8 @@ has(&quot;&quot;)
 <li>清洗<br>not（）</li>
 <li>截取<br>slice（start，end）</li>
 </ul>
-<h3 id="3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20"><a href="#3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20" class="headerlink" title="3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素"></a>3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素</h3><h2 id="u6CE8_u610F_u7EC6_u8282"><a href="#u6CE8_u610F_u7EC6_u8282" class="headerlink" title="注意细节"></a>注意细节</h2><ul>
-<li><p>1.》在使用中css属性时，语义需要用分隔符分开也可以使用原生js的写法。</p>
-<ul>
-<li>2.》注意返回值   用<code>$(this).html();</code>  <code>$(this).val();</code>     是调用一个函数，而不是直接返回html或者value</li>
-<li>3.》map选出的是一组集合，既选出的元素可以是一个利表中的值，属性或者css的样式等，比其他的选择范围要宽广，不是选择器。</li>
-<li>4.》除了hasClass（）中写class的名称，还有map（）中写入函数返回相应的一个集合，还有  filter（）中写入一个函数返回真假值，其余的都是些表达式，即选择器的写法。<h2 id="u4EE3_u7801_u590D_u4E60"><a href="#u4EE3_u7801_u590D_u4E60" class="headerlink" title="代码复习"></a>代码复习</h2></li>
-</ul>
-<p>window.onload = function(){</p>
-<pre><code>var node = document.getElementsByTagName(&apos;input&apos;)[0];
-var p = document.getElementsByTagName(&apos;p&apos;)[0];
-var i = 1;
-do {
-    if( addEventListener ){
-        node.addEventListener(&quot;click&quot;,function(){
-            p.innerHTML += &apos;&lt;br/&gt;(&apos; + i++ + &apos;)&apos; + this.nodeName;
-             // 在这个事件中就移除事件，事件只会执行一次
-            this.removeEventListener(&quot;click&quot;,arguments.callee,false); 
-        },false);
-    }else{
-        node.attachEvent(&quot;onclick&quot;,(function(node){
-            return    function(){
-                         p.innerHTML += &apos;&lt;br/&gt;(&apos; + i++ + &apos;)&apos; + node.nodeName;
-                         node.detachEvent(&quot;onclick&quot;,arguments.callee);
-                    }；
-        }(node)));    //这样写已经不支持了，即使在IE中也无法显示；
-    }
-    node = node.parentNode;
-}while(node);
-
-//  使用event，返回event类型
-node.onclick = function(){
-    var event = window.event || event ;
-    node.value = event.type;
-};
-node.ondblclick = function(){
-    var event = window.event || event;
-    node.value = event.type;
-};
-</code></pre><p>};</p>
-</li>
-</ul>
-<h3 id="u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE"><a href="#u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE" class="headerlink" title="当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回"></a><strong>当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回</strong></h3><p>若是使用当前变量如下：</p>
+<h3 id="3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20"><a href="#3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20" class="headerlink" title="3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素"></a>3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素</h3><h3 id="u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE"><a href="#u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE" class="headerlink" title="当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回"></a><strong>当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回</strong></h3><p>若是使用当前变量如下：</p>
 <pre><code>var div = document.getElementsByTagName(&apos;div&apos;);
-  for (var i = 0; i &lt; div.length; i++){
-      div[i].onmouseover = function(){
-          div[i].style.borderColor = &quot;red&quot;;
-      }
-  }
   for (var i = 0; i &lt; div.length; i++){
       div[i].onmouseout = function(){
           div[i].style.borderColor = &quot;white&quot;;
@@ -374,32 +343,43 @@ node.ondblclick = function(){
 <pre><code>for(var i = 0; i &lt; div.length; i++){
     div[i].onmouseout = (function (i){
         return function(){
-            console.log(this); 
             div[i].style.borderColor=&quot;white&quot;;
         };
 
     })(i);
 }
-</code></pre><h3 id="u6807_u51C6jQuery_u4E8B_u4EF6_u7ED1_u5B9A"><a href="#u6807_u51C6jQuery_u4E8B_u4EF6_u7ED1_u5B9A" class="headerlink" title="标准jQuery事件绑定"></a>标准jQuery事件绑定</h3><p> <em>事件类型，数据对象，函数</em><br>   如下取消元素特定事件的默认行为的三种方式，并且防止事件冒泡</p>
-<pre><code>  $(function(){
-    $(&apos;input&apos;).bind(&quot;click&quot;,{a:&quot;sunliying&quot;,b:&quot; is a girl&quot;},function(event){
-        $(&apos;p&apos;).text(event.data.a+event.data.b);
-        //return false;
-        //event.preventDefault();
-        event.stopPropagation();
-    });
-});
-</code></pre><ol>
-<li><p>使用bind 可绑定函数，使用one()可进行一次绑定使用，之后失效；<br>使用unbind()来接触绑定；<br><strong>函数调用不写括号</strong></p>
+</code></pre><h3 id="u53D6_u6D88_u5143_u7D20_u7279_u5B9A_u4E8B_u4EF6_u7684_u9ED8_u8BA4_u884C_u4E3A"><a href="#u53D6_u6D88_u5143_u7D20_u7279_u5B9A_u4E8B_u4EF6_u7684_u9ED8_u8BA4_u884C_u4E3A" class="headerlink" title="取消元素特定事件的默认行为"></a>取消元素特定事件的默认行为</h3><p>如下取消元素特定事件的默认行为的三种方式，并且防止事件冒泡  </p>
+<ol>
+<li>return false;    </li>
+<li>event.preventDefault();   </li>
+<li><p>event.stopPropagation();    </p>
 <p>   $(function(){</p>
-<pre><code>$(&apos;input&apos;).bind(&quot;click&quot;,sun);
-function sun(){
-    $(&apos;p&apos;).text(&quot;event.data.a+event.data.b&quot;);
-    $(this).unbind(&quot;click&quot;,sun);
-}
-</code></pre><p>   });</p>
+<pre><code>$(&apos;input&apos;).bind(&quot;click&quot;,{a:&quot;sunly&quot;,b:&quot; is a girl&quot;},function(event){
+    $(&apos;p&apos;).text(event.data.a+event.data.b);
+    //return false;
+    //event.preventDefault();
+    event.stopPropagation();
+});
+</code></pre><p> });</p>
+<h3 id="u51FD_u6570_u7ED1_u5B9A"><a href="#u51FD_u6570_u7ED1_u5B9A" class="headerlink" title="函数绑定"></a>函数绑定</h3><p>使用bind 可绑定函数，使用one()可进行一次绑定使用，之后失效；<br>使用unbind()来接触绑定；</p>
 </li>
 </ol>
+<h2 id="u6CE8_u610F_u7EC6_u8282"><a href="#u6CE8_u610F_u7EC6_u8282" class="headerlink" title="注意细节"></a>注意细节</h2><ul>
+<li><ol>
+<li>在使用中css属性时，需要用分隔符分开也可以使用原生js的驼峰写法。</li>
+</ol>
+<ul>
+<li><ol>
+<li>注意返回值   用<code>$(this).html();</code>  <code>$(this).val();</code>     当没有参数时，是返回当前值，但有参数时，是改变其当前值为参数设定的值。</li>
+</ol>
+</li>
+<li><ol>
+<li>除了hasClass（）中写class的名称，map（）中写入函数返回相应的一个集合，还有  filter（）中写入一个函数返回真假值，其余的都是写表达式，即css选择器的写法。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -417,16 +397,16 @@ function sun(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/17/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/01/28/读取对象属性名和属性值/" rel="next" title="选取对象的属性名和值">
+                <i class="fa fa-chevron-left"></i> 选取对象的属性名和值
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/28/读取对象属性名和属性值/" rel="prev" title="选取对象的属性名和值">
-                选取对象的属性名和值 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/24/angular注意细节/" rel="prev" title="jQuery学习：选取和过滤元素">
+                jQuery学习：选取和过滤元素 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -452,6 +432,10 @@ function sun(){
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/02/23/jQuery学习之选取和过滤元素/"
+           data-title="jQuery学习：选取和过滤元素" data-url="http://yoursite.com/2016/02/23/jQuery学习之选取和过滤元素/">
+      </div>
     
   </div>
 
@@ -495,7 +479,7 @@ function sun(){
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -541,7 +525,7 @@ function sun(){
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_jQuery__u7684_ready__u548C_window__u7684_load"><span class="nav-number">1.</span> <span class="nav-text">1. jQuery 的 ready 和  window 的 load</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-__u9009_u62E9_u5143_u7D20_u548C_u8FC7_u6EE4_u5143_u7D20"><span class="nav-number">2.</span> <span class="nav-text">2. 选择元素和过滤元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_u76F4_u63A5_u7528_u9009_u62E9_u5668_u8FDB_u884C_u9009_u62E9"><span class="nav-number">2.1.</span> <span class="nav-text">1.直接用选择器进行选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002"><span class="nav-number">2.2.</span> <span class="nav-text">2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20"><span class="nav-number">2.3.</span> <span class="nav-text">3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6CE8_u610F_u7EC6_u8282"><span class="nav-number">3.</span> <span class="nav-text">注意细节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EE3_u7801_u590D_u4E60"><span class="nav-number">4.</span> <span class="nav-text">代码复习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE"><span class="nav-number">4.1.</span> <span class="nav-text">当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6807_u51C6jQuery_u4E8B_u4EF6_u7ED1_u5B9A"><span class="nav-number">4.2.</span> <span class="nav-text">标准jQuery事件绑定</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_jQuery__u7684_ready__u548C_window__u7684_load"><span class="nav-number">1.</span> <span class="nav-text">1. jQuery 的 ready 和  window 的 load</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002"><span class="nav-number">2.</span> <span class="nav-text">2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20"><span class="nav-number">2.1.</span> <span class="nav-text">3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE"><span class="nav-number">2.2.</span> <span class="nav-text">当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u53D6_u6D88_u5143_u7D20_u7279_u5B9A_u4E8B_u4EF6_u7684_u9ED8_u8BA4_u884C_u4E3A"><span class="nav-number">2.3.</span> <span class="nav-text">取消元素特定事件的默认行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u51FD_u6570_u7ED1_u5B9A"><span class="nav-number">2.4.</span> <span class="nav-text">函数绑定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6CE8_u610F_u7EC6_u8282"><span class="nav-number">3.</span> <span class="nav-text">注意细节</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -793,9 +777,28 @@ function sun(){
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sunly"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+  
+
+
 
 
 
