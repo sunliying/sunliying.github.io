@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="选取元素  过滤元素," />
+  <meta name="keywords" content="bower," />
 
 
 
@@ -57,16 +57,25 @@
 
 
 
-<meta name="description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta name="description" content="之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。.bowerrc 文件是bower的一个配置文件；可以这样讲： 
+
+bower.json指明项目所需要安装的依赖；      
+.b">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery学习：选取和过滤元素">
-<meta property="og:url" content="http://yoursite.com/2016/02/23/jQuery学习之选取和过滤元素/index.html">
+<meta property="og:title" content=".bowerrc">
+<meta property="og:url" content="http://yoursite.com/2016/02/24/bowerrc配置文件/index.html">
 <meta property="og:site_name" content="Sunly">
-<meta property="og:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
-<meta property="og:updated_time" content="2016-02-23T12:27:50.120Z">
+<meta property="og:description" content="之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。.bowerrc 文件是bower的一个配置文件；可以这样讲： 
+
+bower.json指明项目所需要安装的依赖；      
+.b">
+<meta property="og:updated_time" content="2016-02-24T14:58:42.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery学习：选取和过滤元素">
-<meta name="twitter:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta name="twitter:title" content=".bowerrc">
+<meta name="twitter:description" content="之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。.bowerrc 文件是bower的一个配置文件；可以这样讲： 
+
+bower.json指明项目所需要安装的依赖；      
+.b">
 
 
 
@@ -84,7 +93,7 @@
   };
 </script>
 
-  <title> jQuery学习：选取和过滤元素 | Sunly </title>
+  <title> .bowerrc | Sunly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -224,7 +233,7 @@
             
             
               
-                jQuery学习：选取和过滤元素
+                .bowerrc
               
             
           </h1>
@@ -236,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-02-23T20:27:50+08:00" content="2016-02-23">
-              2016-02-23
+            <time itemprop="dateCreated" datetime="2016-02-24T22:58:42+08:00" content="2016-02-24">
+              2016-02-24
             </time>
           </span>
 
@@ -250,8 +259,8 @@
               <span class="post-meta-item-text">分類於</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/jQuery学习/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery学习</span>
+                  <a href="/categories/前端自动化构建工具之bower/" itemprop="url" rel="index">
+                    <span itemprop="name">前端自动化构建工具之bower</span>
                   </a>
                 </span>
 
@@ -266,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/23/jQuery学习之选取和过滤元素/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/jQuery学习之选取和过滤元素/" itemprop="commentsCount"></span>
+                <a href="/2016/02/24/bowerrc配置文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/bowerrc配置文件/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -288,97 +297,22 @@
       
 
       
-        <h2 id="1-_jQuery__u7684_ready__u548C_window__u7684_load"><a href="#1-_jQuery__u7684_ready__u548C_window__u7684_load" class="headerlink" title="1. jQuery 的 ready 和  window 的 load"></a>1. jQuery 的 ready 和  window 的 load</h2><p>要了解ready和load的区别，我们首先应该了解一般浏览器渲染HTML DOM文档时的一般步骤：   </p>
+        <p>之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。<br>.bowerrc 文件是bower的一个配置文件；可以这样讲： </p>
 <ul>
-<li>首先，解析HTML结构；    </li>
-<li>第二，加载外部脚本和样式文件   </li>
-<li>第三，解析并执行脚本代码    </li>
-<li>第四，构造 HTML DOM模型     </li>
-<li>第五，加载外部图片等资源     </li>
-<li>第六，页面加载完毕</li>
-</ul>
-<ol>
-<li>在js中，load事件只能被编写一次，而ready事件是可以在文档中被定义多次的。</li>
-<li>他们生成的时间不同，ready事件是在HTML DOM模型构建完成之后就开始执行的，而load事件是在页面完全加载完毕之后才开始执行的。</li>
-</ol>
-<h2 id="2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002"><a href="#2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002" class="headerlink" title="2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。"></a>2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。</h2><ul>
-<li><p>类过滤<br>if($(this).hasClass(‘re’))</p>
+<li><strong>bower.json指明项目所需要安装的依赖；</strong>      </li>
+<li><p><strong>.bowerrc文件则告诉bower要将依赖安装在哪里；</strong>   </p>
+<p>当然不只是这些功能，但是大致的功能可以这样将；<br>bower的默认目录为项目根目录下的bower_components，但是如果我们不想使用这个文件夹，则可以使用.bowerrc文件自定义下载依赖的目录。</p>
+<p>  { //.bowerrc</p>
+<pre><code>&quot;cwd&quot;: &quot;.&quot;,
+&quot;directory&quot;: &quot;app/bower_components&quot;
+</code></pre><p>  }</p>
 </li>
-<li><p>下标过滤<br> eq(0)  </p>
-</li>
-<li><p>表达式过滤  </p>
-<pre><code>filter(&apos;.re&apos;)    
-has(&quot;&quot;)   
-</code></pre><p><strong>使用filter 函数过滤的时候传进去的函数不用加括号被执行。</strong></p>
-<pre><code>function use() {
-      return $(&quot;span&quot;,this).length==1;
-   }
-  $(&quot;li&quot;).filter(use).css(&apos;font-size&apos;,&apos;30px&apos;);
-</code></pre></li>
 </ul>
+<p>例如上面所示,注意：    </p>
 <ul>
-<li>判断  <pre><code>`  if( $(&apos;div&apos;).has(&quot;.re&quot;) ){        }`
-</code></pre></li>
-<li><p>map映射<br><strong>map（）方法通过映射关系，将一组元素转换成其他数组</strong><br>如下得到的只是第一个input的value<br>  <code>$(&#39;.subject-main-each-content&gt;p&#39;).append($(&quot;.subject-main-each-content&gt;p&gt;input&quot;).val());</code><br>如下所得相同：<br>  <code>$(&#39;.subject-main-each-content&gt;p&#39;).append($(&quot;.subject-main-each-content&gt;p&gt;input&quot;).eq(2).val());</code><br>这样可以得到所选的input的value</p>
-<pre><code>$(&apos;.subject-main-each-content&gt;p&apos;)
-   .append($(&quot;.subject-main-each-content&gt;p&gt;input&quot;).map(function(){
-       return $(this).val();
- }).get().join(&apos;、&apos;)); 
-</code></pre></li>
-</ul>
-<p>这样可以得到所有的value值并链接起来。</p>
-<p>上述通过map方法把所有匹配的input元素的value属性值映射为一个新集合，然后调用get（）方法将集合内的数据转换成数组，在调用join方法及进行连接，最后将其放入p元素之后。</p>
-<ul>
-<li>清洗<br>not（）</li>
-<li>截取<br>slice（start，end）</li>
-</ul>
-<h3 id="3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20"><a href="#3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20" class="headerlink" title="3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素"></a>3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素</h3><h3 id="u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE"><a href="#u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE" class="headerlink" title="当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回"></a><strong>当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回</strong></h3><p>若是使用当前变量如下：</p>
-<pre><code>var div = document.getElementsByTagName(&apos;div&apos;);
-  for (var i = 0; i &lt; div.length; i++){
-      div[i].onmouseout = function(){
-          div[i].style.borderColor = &quot;white&quot;;
-      }
-  }
-</code></pre><p>要用闭包形式进行变量传递</p>
-<pre><code>for(var i = 0; i &lt; div.length; i++){
-    div[i].onmouseout = (function (i){
-        return function(){
-            div[i].style.borderColor=&quot;white&quot;;
-        };
-
-    })(i);
-}
-</code></pre><h3 id="u53D6_u6D88_u5143_u7D20_u7279_u5B9A_u4E8B_u4EF6_u7684_u9ED8_u8BA4_u884C_u4E3A"><a href="#u53D6_u6D88_u5143_u7D20_u7279_u5B9A_u4E8B_u4EF6_u7684_u9ED8_u8BA4_u884C_u4E3A" class="headerlink" title="取消元素特定事件的默认行为"></a>取消元素特定事件的默认行为</h3><p>如下取消元素特定事件的默认行为的三种方式，并且防止事件冒泡  </p>
-<ol>
-<li>return false;    </li>
-<li>event.preventDefault();   </li>
-<li><p>event.stopPropagation();    </p>
-<p>   $(function(){</p>
-<pre><code>$(&apos;input&apos;).bind(&quot;click&quot;,{a:&quot;sunly&quot;,b:&quot; is a girl&quot;},function(event){
-    $(&apos;p&apos;).text(event.data.a+event.data.b);
-    //return false;
-    //event.preventDefault();
-    event.stopPropagation();
-});
-</code></pre><p> });</p>
-<h3 id="u51FD_u6570_u7ED1_u5B9A"><a href="#u51FD_u6570_u7ED1_u5B9A" class="headerlink" title="函数绑定"></a>函数绑定</h3><p>使用bind 可绑定函数，使用one()可进行一次绑定使用，之后失效；<br>使用unbind()来接触绑定；</p>
-</li>
-</ol>
-<h2 id="u6CE8_u610F_u7EC6_u8282"><a href="#u6CE8_u610F_u7EC6_u8282" class="headerlink" title="注意细节"></a>注意细节</h2><ul>
-<li><ol>
-<li>在使用中css属性时，需要用分隔符分开也可以使用原生js的驼峰写法。</li>
-</ol>
-<ul>
-<li><ol>
-<li>注意返回值   用<code>$(this).html();</code>  <code>$(this).val();</code>     当没有参数时，是返回当前值，但有参数时，是改变其当前值为参数设定的值。</li>
-</ol>
-</li>
-<li><ol>
-<li>除了hasClass（）中写class的名称，map（）中写入函数返回相应的一个集合，还有  filter（）中写入一个函数返回真假值，其余的都是写表达式，即css选择器的写法。</li>
-</ol>
-</li>
-</ul>
-</li>
+<li>要想使.bowerrc文件起作用，就必须在其所在目录或者子目录进行依赖下载</li>
+<li>所选取路径是相对于bowerrc文件的；</li>
+<li>若是路径中没有相应的文件，在下载依赖时，会自动生成相应的路径；</li>
 </ul>
 
       
@@ -388,7 +322,7 @@ has(&quot;&quot;)
       
         <div class="post-tags">
           
-            <a href="/tags/选取元素-过滤元素/" rel="tag">#选取元素  过滤元素</a>
+            <a href="/tags/bower/" rel="tag">#bower</a>
           
         </div>
       
@@ -397,16 +331,16 @@ has(&quot;&quot;)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/28/读取对象属性名和属性值/" rel="next" title="选取对象的属性名和值">
-                <i class="fa fa-chevron-left"></i> 选取对象的属性名和值
+              <a href="/2016/02/24/angular注意细节/" rel="next" title="jQuery学习：选取和过滤元素">
+                <i class="fa fa-chevron-left"></i> jQuery学习：选取和过滤元素
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/24/angular注意细节/" rel="prev" title="jQuery学习：选取和过滤元素">
-                jQuery学习：选取和过滤元素 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/24/createCustomDirective/" rel="prev" title="angularjs实现自定义指令">
+                angularjs实现自定义指令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -433,8 +367,8 @@ has(&quot;&quot;)
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/23/jQuery学习之选取和过滤元素/"
-           data-title="jQuery学习：选取和过滤元素" data-url="http://yoursite.com/2016/02/23/jQuery学习之选取和过滤元素/">
+      <div class="ds-thread" data-thread-key="2016/02/24/bowerrc配置文件/"
+           data-title=".bowerrc" data-url="http://yoursite.com/2016/02/24/bowerrc配置文件/">
       </div>
     
   </div>
@@ -525,7 +459,7 @@ has(&quot;&quot;)
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_jQuery__u7684_ready__u548C_window__u7684_load"><span class="nav-number">1.</span> <span class="nav-text">1. jQuery 的 ready 和  window 的 load</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_u51E0_u79CD_u8FC7_u6EE4_u65B9_u5F0F_uFF0C_u8FD9_u4E9B_u662F_u5BF9_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u8FDB_u884C_u64CD_u4F5C_uFF0C_u4EE5_u5B9E_u73B0_u4E8C_u6B21_u8FC7_u6EE4_u3002"><span class="nav-number">2.</span> <span class="nav-text">2.几种过滤方式，这些是对当前的jQuery对象进行操作，以实现二次过滤。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_u67E5_u627E__u8FD9_u662F_u4EE5_u5F53_u524D_u7684jQuery_u5BF9_u8C61_u4E3A_u57FA_u7840_uFF0C_u67E5_u627E_u7236_u7EA7_u3001_u540C_u7EA7_u6216_u8005_u4E0B_u7EA7_u7684_u5143_u7D20"><span class="nav-number">2.1.</span> <span class="nav-text">3.查找  这是以当前的jQuery对象为基础，查找父级、同级或者下级的元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5F53_u7528_u5FAA_u73AF_u6267_u884C_u4E00_u7CFB_u5217_u7684_u5143_u7D20_u7ED1_u5B9A_u4E8B_u4EF6_u65F6_uFF0C_u4E0D_u80FD_u4F7F_u7528_u5F53_u524D_u7684_u53D8_u91CF_u76F4_u63A5_u8FDB_u884C_u7ED1_u5B9A_uFF0C_u800C_u9700_u8981_u4F7F_u7528_u95ED_u5305_u8FD4_u56DE"><span class="nav-number">2.2.</span> <span class="nav-text">当用循环执行一系列的元素绑定事件时，不能使用当前的变量直接进行绑定，而需要使用闭包返回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u53D6_u6D88_u5143_u7D20_u7279_u5B9A_u4E8B_u4EF6_u7684_u9ED8_u8BA4_u884C_u4E3A"><span class="nav-number">2.3.</span> <span class="nav-text">取消元素特定事件的默认行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u51FD_u6570_u7ED1_u5B9A"><span class="nav-number">2.4.</span> <span class="nav-text">函数绑定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6CE8_u610F_u7EC6_u8282"><span class="nav-number">3.</span> <span class="nav-text">注意细节</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目錄</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
