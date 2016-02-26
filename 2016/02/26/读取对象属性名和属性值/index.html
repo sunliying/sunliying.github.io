@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="选取元素  过滤元素," />
+  <meta name="keywords" content="遍历对象," />
 
 
 
@@ -57,16 +57,28 @@
 
 
 
-<meta name="description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta name="description" content="1. 不知道对象的具体属性从一个对象中选取属性名`for( var value in person){
+                console.log( value );
+            }`
+从一个对象中选取属性值`for( var value in person){
+                console.log( person[value] );">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery学习：选取和过滤元素">
-<meta property="og:url" content="http://yoursite.com/2016/02/24/angular注意细节/index.html">
+<meta property="og:title" content="选取对象的属性名和值">
+<meta property="og:url" content="http://yoursite.com/2016/02/26/读取对象属性名和属性值/index.html">
 <meta property="og:site_name" content="Sunly">
-<meta property="og:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
-<meta property="og:updated_time" content="2016-02-23T12:03:10.278Z">
+<meta property="og:description" content="1. 不知道对象的具体属性从一个对象中选取属性名`for( var value in person){
+                console.log( value );
+            }`
+从一个对象中选取属性值`for( var value in person){
+                console.log( person[value] );">
+<meta property="og:updated_time" content="2016-01-28T13:27:03.605Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery学习：选取和过滤元素">
-<meta name="twitter:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta name="twitter:title" content="选取对象的属性名和值">
+<meta name="twitter:description" content="1. 不知道对象的具体属性从一个对象中选取属性名`for( var value in person){
+                console.log( value );
+            }`
+从一个对象中选取属性值`for( var value in person){
+                console.log( person[value] );">
 
 
 
@@ -84,7 +96,7 @@
   };
 </script>
 
-  <title> jQuery学习：选取和过滤元素 | Sunly </title>
+  <title> 选取对象的属性名和值 | Sunly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -224,7 +236,7 @@
             
             
               
-                jQuery学习：选取和过滤元素
+                选取对象的属性名和值
               
             
           </h1>
@@ -236,8 +248,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-02-24T22:34:31+08:00" content="2016-02-24">
-              2016-02-24
+            <time itemprop="dateCreated" datetime="2016-02-26T10:12:14+08:00" content="2016-02-26">
+              2016-02-26
             </time>
           </span>
 
@@ -250,8 +262,8 @@
               <span class="post-meta-item-text">分類於</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/jQuery学习/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery学习</span>
+                  <a href="/categories/js学习/" itemprop="url" rel="index">
+                    <span itemprop="name">js学习</span>
                   </a>
                 </span>
 
@@ -266,8 +278,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/24/angular注意细节/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/angular注意细节/" itemprop="commentsCount"></span>
+                <a href="/2016/02/26/读取对象属性名和属性值/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/26/读取对象属性名和属性值/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -288,18 +300,17 @@
       
 
       
-        <p>ng-init  用于初始化变量<br>ng-model  将输入的值绑定到变量上，绑定应用程序数据到HTML控制器（input，select，textarea）的值，<br>ng-app  定义应用程序<br>ng-bind和表达式   将经过处理的数据绑定到HTML<br>ng-repeat 循环数组，会重复一个HTML元素</p>
-<p><ul><br>    <li ng-reapeat="x in names"><br>        <br>    </li><br></ul><br><em>names</em>是一个数组</p>
-<p>angularJS 模块（Module）<br>angularJS 控制器（Controller）</p>
-<p>var app = angular.module(“myApp”,[]);<br>app.controller(“myCtrl”,function($scope){<br>    $scope.firstName = “Jone”;<br>    $scope.lastName = “Doe”;<br>})</p>
-<ol>
-<li>AngularJS完美支持数据库中的CRUD应用程序</li>
-<li>创建自定义指令 （使用.derective函数来添加自定义的指令）</li>
-<li>使用驼峰法myWord来命名一个指令，但在使用时需要使用中划线来分割my-word</li>
-</ol>
-<p>###$scope<br>视图引用了controller中写在$scope 对象上的属性值</p>
-<h3 id="u6301_u7EED_u663E_u793AloadDep_3A_u2026"><a href="#u6301_u7EED_u663E_u793AloadDep_3A_u2026" class="headerlink" title="持续显示loadDep:…"></a>持续显示loadDep:…</h3><p>这种状况是因为网速过慢，而不能下载依赖。</p>
-
+        <h3 id="1-__u4E0D_u77E5_u9053_u5BF9_u8C61_u7684_u5177_u4F53_u5C5E_u6027"><a href="#1-__u4E0D_u77E5_u9053_u5BF9_u8C61_u7684_u5177_u4F53_u5C5E_u6027" class="headerlink" title="1. 不知道对象的具体属性"></a>1. 不知道对象的具体属性</h3><h3 id="u4ECE_u4E00_u4E2A_u5BF9_u8C61_u4E2D_u9009_u53D6_u5C5E_u6027_u540D"><a href="#u4ECE_u4E00_u4E2A_u5BF9_u8C61_u4E2D_u9009_u53D6_u5C5E_u6027_u540D" class="headerlink" title="从一个对象中选取属性名"></a>从一个对象中选取属性名</h3><pre><code>`for( var value in person){
+                console.log( value );
+            }`
+</code></pre><h3 id="u4ECE_u4E00_u4E2A_u5BF9_u8C61_u4E2D_u9009_u53D6_u5C5E_u6027_u503C"><a href="#u4ECE_u4E00_u4E2A_u5BF9_u8C61_u4E2D_u9009_u53D6_u5C5E_u6027_u503C" class="headerlink" title="从一个对象中选取属性值"></a>从一个对象中选取属性值</h3><pre><code>`for( var value in person){
+                console.log( person[value] );
+            }`
+</code></pre><h3 id="2-__u4E0D_u77E5_u9053_u5BF9_u8C61_u7684_u5177_u4F53_u5C5E_u6027"><a href="#2-__u4E0D_u77E5_u9053_u5BF9_u8C61_u7684_u5177_u4F53_u5C5E_u6027" class="headerlink" title="2. 不知道对象的具体属性"></a>2. 不知道对象的具体属性</h3><h3 id="u4ECE_u6570_u7EC4_u4E2D_u9009_u53D6_u5BF9_u8C61_uFF0C_u8BFB_u53D6_u5BF9_u8C61_u7684_u5C5E_u6027_u503C"><a href="#u4ECE_u6570_u7EC4_u4E2D_u9009_u53D6_u5BF9_u8C61_uFF0C_u8BFB_u53D6_u5BF9_u8C61_u7684_u5C5E_u6027_u503C" class="headerlink" title="从数组中选取对象，读取对象的属性值"></a>从数组中选取对象，读取对象的属性值</h3><pre><code>`for ( var person in persons ){
+        console.log( person.name )；
+        console.log( person.gender );
+    }`
+</code></pre>
       
     </div>
 
@@ -307,7 +318,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/选取元素-过滤元素/" rel="tag">#选取元素  过滤元素</a>
+            <a href="/tags/遍历对象/" rel="tag">#遍历对象</a>
           
         </div>
       
@@ -316,16 +327,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/23/jQuery学习之选取和过滤元素/" rel="next" title="jQuery学习：选取和过滤元素">
-                <i class="fa fa-chevron-left"></i> jQuery学习：选取和过滤元素
+              <a href="/2016/02/26/angular简介/" rel="next" title="angular简介">
+                <i class="fa fa-chevron-left"></i> angular简介
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/24/createCustomDirective/" rel="prev" title="angularjs实现自定义指令">
-                angularjs实现自定义指令 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/26/bowerrc配置文件/" rel="prev" title=".bowerrc">
+                .bowerrc <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -352,8 +363,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/24/angular注意细节/"
-           data-title="jQuery学习：选取和过滤元素" data-url="http://yoursite.com/2016/02/24/angular注意细节/">
+      <div class="ds-thread" data-thread-key="2016/02/26/读取对象属性名和属性值/"
+           data-title="选取对象的属性名和值" data-url="http://yoursite.com/2016/02/26/读取对象属性名和属性值/">
       </div>
     
   </div>
@@ -444,7 +455,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6301_u7EED_u663E_u793AloadDep_3A_u2026"><span class="nav-number">1.</span> <span class="nav-text">持续显示loadDep:…</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-__u4E0D_u77E5_u9053_u5BF9_u8C61_u7684_u5177_u4F53_u5C5E_u6027"><span class="nav-number">1.</span> <span class="nav-text">1. 不知道对象的具体属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4ECE_u4E00_u4E2A_u5BF9_u8C61_u4E2D_u9009_u53D6_u5C5E_u6027_u540D"><span class="nav-number">2.</span> <span class="nav-text">从一个对象中选取属性名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4ECE_u4E00_u4E2A_u5BF9_u8C61_u4E2D_u9009_u53D6_u5C5E_u6027_u503C"><span class="nav-number">3.</span> <span class="nav-text">从一个对象中选取属性值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-__u4E0D_u77E5_u9053_u5BF9_u8C61_u7684_u5177_u4F53_u5C5E_u6027"><span class="nav-number">4.</span> <span class="nav-text">2. 不知道对象的具体属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4ECE_u6570_u7EC4_u4E2D_u9009_u53D6_u5BF9_u8C61_uFF0C_u8BFB_u53D6_u5BF9_u8C61_u7684_u5C5E_u6027_u503C"><span class="nav-number">5.</span> <span class="nav-text">从数组中选取对象，读取对象的属性值</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

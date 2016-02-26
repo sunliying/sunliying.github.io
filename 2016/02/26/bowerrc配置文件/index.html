@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="选取元素  过滤元素," />
+  <meta name="keywords" content="bower," />
 
 
 
@@ -57,16 +57,25 @@
 
 
 
-<meta name="description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta name="description" content="之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。.bowerrc 文件是bower的一个配置文件；可以这样讲： 
+
+bower.json指明项目所需要安装的依赖；      
+.b">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery学习：选取和过滤元素">
-<meta property="og:url" content="http://yoursite.com/2016/02/24/angular注意细节/index.html">
+<meta property="og:title" content=".bowerrc">
+<meta property="og:url" content="http://yoursite.com/2016/02/26/bowerrc配置文件/index.html">
 <meta property="og:site_name" content="Sunly">
-<meta property="og:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
-<meta property="og:updated_time" content="2016-02-23T12:03:10.278Z">
+<meta property="og:description" content="之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。.bowerrc 文件是bower的一个配置文件；可以这样讲： 
+
+bower.json指明项目所需要安装的依赖；      
+.b">
+<meta property="og:updated_time" content="2016-02-24T14:58:42.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery学习：选取和过滤元素">
-<meta name="twitter:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta name="twitter:title" content=".bowerrc">
+<meta name="twitter:description" content="之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。.bowerrc 文件是bower的一个配置文件；可以这样讲： 
+
+bower.json指明项目所需要安装的依赖；      
+.b">
 
 
 
@@ -84,7 +93,7 @@
   };
 </script>
 
-  <title> jQuery学习：选取和过滤元素 | Sunly </title>
+  <title> .bowerrc | Sunly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -224,7 +233,7 @@
             
             
               
-                jQuery学习：选取和过滤元素
+                .bowerrc
               
             
           </h1>
@@ -236,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-02-24T22:34:31+08:00" content="2016-02-24">
-              2016-02-24
+            <time itemprop="dateCreated" datetime="2016-02-26T10:12:20+08:00" content="2016-02-26">
+              2016-02-26
             </time>
           </span>
 
@@ -250,8 +259,8 @@
               <span class="post-meta-item-text">分類於</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/jQuery学习/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery学习</span>
+                  <a href="/categories/前端自动化构建工具之bower/" itemprop="url" rel="index">
+                    <span itemprop="name">前端自动化构建工具之bower</span>
                   </a>
                 </span>
 
@@ -266,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/24/angular注意细节/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/angular注意细节/" itemprop="commentsCount"></span>
+                <a href="/2016/02/26/bowerrc配置文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/26/bowerrc配置文件/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -288,17 +297,23 @@
       
 
       
-        <p>ng-init  用于初始化变量<br>ng-model  将输入的值绑定到变量上，绑定应用程序数据到HTML控制器（input，select，textarea）的值，<br>ng-app  定义应用程序<br>ng-bind和表达式   将经过处理的数据绑定到HTML<br>ng-repeat 循环数组，会重复一个HTML元素</p>
-<p><ul><br>    <li ng-reapeat="x in names"><br>        <br>    </li><br></ul><br><em>names</em>是一个数组</p>
-<p>angularJS 模块（Module）<br>angularJS 控制器（Controller）</p>
-<p>var app = angular.module(“myApp”,[]);<br>app.controller(“myCtrl”,function($scope){<br>    $scope.firstName = “Jone”;<br>    $scope.lastName = “Doe”;<br>})</p>
-<ol>
-<li>AngularJS完美支持数据库中的CRUD应用程序</li>
-<li>创建自定义指令 （使用.derective函数来添加自定义的指令）</li>
-<li>使用驼峰法myWord来命名一个指令，但在使用时需要使用中划线来分割my-word</li>
-</ol>
-<p>###$scope<br>视图引用了controller中写在$scope 对象上的属性值</p>
-<h3 id="u6301_u7EED_u663E_u793AloadDep_3A_u2026"><a href="#u6301_u7EED_u663E_u793AloadDep_3A_u2026" class="headerlink" title="持续显示loadDep:…"></a>持续显示loadDep:…</h3><p>这种状况是因为网速过慢，而不能下载依赖。</p>
+        <p>之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。<br>.bowerrc 文件是bower的一个配置文件；可以这样讲： </p>
+<ul>
+<li><strong>bower.json指明项目所需要安装的依赖；</strong>      </li>
+<li><p><strong>.bowerrc文件则告诉bower要将依赖安装在哪里；</strong>   </p>
+<p>当然不只是这些功能，但是大致的功能可以这样将；<br>bower的默认目录为项目根目录下的bower_components，但是如果我们不想使用这个文件夹，则可以使用.bowerrc文件自定义下载依赖的目录。</p>
+<p>  { //.bowerrc</p>
+<pre><code>&quot;cwd&quot;: &quot;.&quot;,
+&quot;directory&quot;: &quot;app/bower_components&quot;
+</code></pre><p>  }</p>
+</li>
+</ul>
+<p>例如上面所示,注意：    </p>
+<ul>
+<li>要想使.bowerrc文件起作用，就必须在其所在目录或者子目录进行依赖下载</li>
+<li>所选取路径是相对于bowerrc文件的；</li>
+<li>若是路径中没有相应的文件，在下载依赖时，会自动生成相应的路径；</li>
+</ul>
 
       
     </div>
@@ -307,7 +322,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/选取元素-过滤元素/" rel="tag">#选取元素  过滤元素</a>
+            <a href="/tags/bower/" rel="tag">#bower</a>
           
         </div>
       
@@ -316,16 +331,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/23/jQuery学习之选取和过滤元素/" rel="next" title="jQuery学习：选取和过滤元素">
-                <i class="fa fa-chevron-left"></i> jQuery学习：选取和过滤元素
+              <a href="/2016/02/26/读取对象属性名和属性值/" rel="next" title="选取对象的属性名和值">
+                <i class="fa fa-chevron-left"></i> 选取对象的属性名和值
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/24/createCustomDirective/" rel="prev" title="angularjs实现自定义指令">
-                angularjs实现自定义指令 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/26/angularApp/" rel="prev" title="实现一套完整的angular应用程序">
+                实现一套完整的angular应用程序 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -352,8 +367,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/24/angular注意细节/"
-           data-title="jQuery学习：选取和过滤元素" data-url="http://yoursite.com/2016/02/24/angular注意细节/">
+      <div class="ds-thread" data-thread-key="2016/02/26/bowerrc配置文件/"
+           data-title=".bowerrc" data-url="http://yoursite.com/2016/02/26/bowerrc配置文件/">
       </div>
     
   </div>
@@ -444,7 +459,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6301_u7EED_u663E_u793AloadDep_3A_u2026"><span class="nav-number">1.</span> <span class="nav-text">持续显示loadDep:…</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目錄</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

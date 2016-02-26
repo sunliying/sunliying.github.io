@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="选取元素  过滤元素," />
+  <meta name="keywords" content="angular应用程序构建框架," />
 
 
 
@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta name="description" content="本文描述了如何构建一个简单地angular应用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery学习：选取和过滤元素">
-<meta property="og:url" content="http://yoursite.com/2016/02/24/angular注意细节/index.html">
+<meta property="og:title" content="实现一套完整的angular应用程序">
+<meta property="og:url" content="http://yoursite.com/2016/02/26/angularApp/index.html">
 <meta property="og:site_name" content="Sunly">
-<meta property="og:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
-<meta property="og:updated_time" content="2016-02-23T12:03:10.278Z">
+<meta property="og:description" content="本文描述了如何构建一个简单地angular应用">
+<meta property="og:updated_time" content="2016-02-26T02:14:02.703Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery学习：选取和过滤元素">
-<meta name="twitter:description" content="这时一篇关于jQuery的选取和过滤元素的文章">
+<meta name="twitter:title" content="实现一套完整的angular应用程序">
+<meta name="twitter:description" content="本文描述了如何构建一个简单地angular应用">
 
 
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title> jQuery学习：选取和过滤元素 | Sunly </title>
+  <title> 实现一套完整的angular应用程序 | Sunly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -224,7 +224,7 @@
             
             
               
-                jQuery学习：选取和过滤元素
+                实现一套完整的angular应用程序
               
             
           </h1>
@@ -236,8 +236,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-02-24T22:34:31+08:00" content="2016-02-24">
-              2016-02-24
+            <time itemprop="dateCreated" datetime="2016-02-26T10:14:02+08:00" content="2016-02-26">
+              2016-02-26
             </time>
           </span>
 
@@ -250,8 +250,8 @@
               <span class="post-meta-item-text">分類於</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/jQuery学习/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery学习</span>
+                  <a href="/categories/angular/" itemprop="url" rel="index">
+                    <span itemprop="name">angular</span>
                   </a>
                 </span>
 
@@ -266,8 +266,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/24/angular注意细节/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/angular注意细节/" itemprop="commentsCount"></span>
+                <a href="/2016/02/26/angularApp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/26/angularApp/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -288,17 +288,43 @@
       
 
       
-        <p>ng-init  用于初始化变量<br>ng-model  将输入的值绑定到变量上，绑定应用程序数据到HTML控制器（input，select，textarea）的值，<br>ng-app  定义应用程序<br>ng-bind和表达式   将经过处理的数据绑定到HTML<br>ng-repeat 循环数组，会重复一个HTML元素</p>
-<p><ul><br>    <li ng-reapeat="x in names"><br>        <br>    </li><br></ul><br><em>names</em>是一个数组</p>
-<p>angularJS 模块（Module）<br>angularJS 控制器（Controller）</p>
-<p>var app = angular.module(“myApp”,[]);<br>app.controller(“myCtrl”,function($scope){<br>    $scope.firstName = “Jone”;<br>    $scope.lastName = “Doe”;<br>})</p>
+        <ul>
+<li>使用客户端数据绑定去构建动态视图，数据修改之后将立刻响应给客户。   </li>
+<li>使用$scope全局对象、ng-model、ng-bind以及实现双向数据绑定    </li>
+<li>使用$http service 对服务器端数据进行读取     </li>
+<li>使用ng-route，实现路由配置    </li>
+<li>使用ng-animate，实现动画效果   </li>
+<li>通过Karma进行单元测试   </li>
+<li>使用Protractor实现终端测试   </li>
+<li>指令的使用，使用repeat和filter以及其他命令实现过滤查找 ###<h3 id="u4F9D_u8D56_u6CE8_u5165_u7684_u51E0_u79CD_u65B9_u5F0F"><a href="#u4F9D_u8D56_u6CE8_u5165_u7684_u51E0_u79CD_u65B9_u5F0F" class="headerlink" title="依赖注入的几种方式"></a>依赖注入的几种方式</h3>为了使压缩js代码时注入的依赖不发生错误，最好单独列出所注入的依赖</li>
+</ul>
 <ol>
-<li>AngularJS完美支持数据库中的CRUD应用程序</li>
-<li>创建自定义指令 （使用.derective函数来添加自定义的指令）</li>
-<li>使用驼峰法myWord来命名一个指令，但在使用时需要使用中划线来分割my-word</li>
+<li><p>create a <code>$inject</code> property</p>
+<pre><code>function personsCtrl( $scope,$http){...}
+personCtrl.$inject = [&apos;$scope&apos;,&apos;$http&apos;];
+personApp.controller(&apos;personCtrl&apos;,personCtrl);
+</code></pre></li>
+<li><p>an inline annotation</p>
+<pre><code>function PersonCtrl($scope,$http){}
+   personApp.controller(&apos;personCtrl&apos;,[&apos;$scope&apos;,&apos;$http&apos;,personCtrl]);
+</code></pre></li>
+<li><p>provide the construction function inline as an anonymous function</p>
+<pre><code>personApp.controller(&apos;personCtrl&apos;,[&apos;$scope&apos;,&apos;$http&apos;,function($scope,$http){}]);
+</code></pre></li>
 </ol>
-<p>###$scope<br>视图引用了controller中写在$scope 对象上的属性值</p>
-<h3 id="u6301_u7EED_u663E_u793AloadDep_3A_u2026"><a href="#u6301_u7EED_u663E_u793AloadDep_3A_u2026" class="headerlink" title="持续显示loadDep:…"></a>持续显示loadDep:…</h3><p>这种状况是因为网速过慢，而不能下载依赖。</p>
+<h3 id="5-__u63D2_u5165_u5730_u5740"><a href="#5-__u63D2_u5165_u5730_u5740" class="headerlink" title="5. 插入地址"></a>5. 插入地址</h3><p>使用ng-src指令，能够避免在angular尚未被解析完成之前浏览器错误的解析地址。</p>
+<h3 id="6-_create_a_layout_template_2C_and_write_routings"><a href="#6-_create_a_layout_template_2C_and_write_routings" class="headerlink" title="6. create a layout template, and write routings"></a>6. create a layout template, and write routings</h3><p><strong>ng-route，ng-animate，ng-resource</strong>都不在angular core中，都是单独的，需要单独的引入；<br>angular-route.js &amp;&amp; angular-animate.js</p>
+<h3 id="u8DEF_u7531_u8BBE_u7F6E"><a href="#u8DEF_u7531_u8BBE_u7F6E" class="headerlink" title="路由设置"></a>路由设置</h3><ol>
+<li><strong>路由引入并没有设置ng-controllor???</strong>；</li>
+<li>使用index.html 作为layout template</li>
+<li>在partail里面写入不同的view</li>
+<li>在app.js中配置所需依赖和路由</li>
+<li>在controllers.js中配置控制器</li>
+<li><strong>使用routeParams使得相应的链接对应相应的远程数据</strong></li>
+<li>the future object and data-binding</li>
+<li>当多个controller里面有相同的代码时，我们需要把它凑成一个服务service。     </li>
+</ol>
+<p>未完待续。。。</p>
 
       
     </div>
@@ -307,7 +333,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/选取元素-过滤元素/" rel="tag">#选取元素  过滤元素</a>
+            <a href="/tags/angular应用程序构建框架/" rel="tag">#angular应用程序构建框架</a>
           
         </div>
       
@@ -316,17 +342,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/23/jQuery学习之选取和过滤元素/" rel="next" title="jQuery学习：选取和过滤元素">
-                <i class="fa fa-chevron-left"></i> jQuery学习：选取和过滤元素
+              <a href="/2016/02/26/bowerrc配置文件/" rel="next" title=".bowerrc">
+                <i class="fa fa-chevron-left"></i> .bowerrc
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/24/createCustomDirective/" rel="prev" title="angularjs实现自定义指令">
-                angularjs实现自定义指令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -352,8 +374,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/24/angular注意细节/"
-           data-title="jQuery学习：选取和过滤元素" data-url="http://yoursite.com/2016/02/24/angular注意细节/">
+      <div class="ds-thread" data-thread-key="2016/02/26/angularApp/"
+           data-title="实现一套完整的angular应用程序" data-url="http://yoursite.com/2016/02/26/angularApp/">
       </div>
     
   </div>
@@ -444,7 +466,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6301_u7EED_u663E_u793AloadDep_3A_u2026"><span class="nav-number">1.</span> <span class="nav-text">持续显示loadDep:…</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F9D_u8D56_u6CE8_u5165_u7684_u51E0_u79CD_u65B9_u5F0F"><span class="nav-number">1.</span> <span class="nav-text">依赖注入的几种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-__u63D2_u5165_u5730_u5740"><span class="nav-number">2.</span> <span class="nav-text">5. 插入地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-_create_a_layout_template_2C_and_write_routings"><span class="nav-number">3.</span> <span class="nav-text">6. create a layout template, and write routings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u8DEF_u7531_u8BBE_u7F6E"><span class="nav-number">4.</span> <span class="nav-text">路由设置</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
