@@ -246,7 +246,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-02-26T10:14:02+08:00" content="2016-02-26">
+            <time itemprop="dateCreated" datetime="2016-02-26T10:23:56+08:00" content="2016-02-26">
               2016-02-26
             </time>
           </span>
@@ -305,6 +305,126 @@
               閱讀全文 &raquo;
             </a>
           </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/26/angular注意细节/" itemprop="url">
+                  angular细节
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-02-26T10:23:42+08:00" content="2016-02-26">
+              2016-02-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/angular/" itemprop="url" rel="index">
+                    <span itemprop="name">angular</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/26/angular注意细节/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/26/angular注意细节/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ng-init  用于初始化变量<br>ng-model  将输入的值绑定到变量上，绑定应用程序数据到HTML控制器（input，select，textarea）的值，<br>ng-app  定义应用程序<br>ng-bind和表达式   将经过处理的数据绑定到HTML<br>ng-repeat 循环数组，会重复一个HTML元素</p>
+<p><ul><br>    <li ng-reapeat="x in names"><br>        <br>    </li><br></ul><br><em>names</em>是一个数组</p>
+<p>angularJS 模块（Module）<br>angularJS 控制器（Controller）</p>
+<p>var app = angular.module(“myApp”,[]);<br>app.controller(“myCtrl”,function($scope){<br>    $scope.firstName = “Jone”;<br>    $scope.lastName = “Doe”;<br>})</p>
+<ol>
+<li>AngularJS完美支持数据库中的CRUD应用程序</li>
+<li>创建自定义指令 （使用.derective函数来添加自定义的指令）</li>
+<li>使用驼峰法myWord来命名一个指令，但在使用时需要使用中划线来分割my-word</li>
+</ol>
+<p>###$scope<br>视图引用了controller中写在$scope 对象上的属性值</p>
+<h3 id="u6301_u7EED_u663E_u793AloadDep_3A_u2026"><a href="#u6301_u7EED_u663E_u793AloadDep_3A_u2026" class="headerlink" title="持续显示loadDep:…"></a>持续显示loadDep:…</h3><p>这种状况是因为网速过慢，而不能下载依赖。</p>
+
+          
         
       
     </div>
@@ -722,6 +842,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/angular/" itemprop="url" rel="index">
+                    <span itemprop="name">angular</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -902,118 +1041,6 @@ if(date1&gt;date2){...}
             <p>指令系统是angular中的一个耀眼的特点，可以构建自定义的HTML标签。本文根据angular官网首页的例子总结一下如何使用angular实现自定义标签；</p>
 
           
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/24/angular注意细节/" itemprop="url">
-                  jQuery学习：选取和过滤元素
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-02-24T22:34:31+08:00" content="2016-02-24">
-              2016-02-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/jQuery学习/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery学习</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/24/angular注意细节/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/angular注意细节/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          这时一篇关于jQuery的选取和过滤元素的文章
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/24/angular注意细节/">
-              閱讀全文 &raquo;
-            </a>
-          </div>
         
       
     </div>
@@ -1299,7 +1326,7 @@ if(date1&gt;date2){...}
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
