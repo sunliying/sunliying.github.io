@@ -57,19 +57,67 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="&amp;lt;!-- js实现树结构 --&amp;gt;
+&amp;lt;!-- 
+1. 使用jQuery获取特定元素的方式 伪类元素的使用
+2. toggle()  toggleClass()  slideToggle()
+ --&amp;gt;
+
+&amp;lt;!DOCTYPE html&amp;gt;
+
+
+	
+	test
+	
+		.tree{
+			width: 400px; 		
+		}
+		li{
+			font-size: 20px;
+			font-famil">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/01/17/hello-world/index.html">
+<meta property="og:title" content="Sunly">
+<meta property="og:url" content="http://yoursite.com/2016/02/17/tree/index.html">
 <meta property="og:site_name" content="Sunly">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-01-17T03:13:58.690Z">
+<meta property="og:description" content="&amp;lt;!-- js实现树结构 --&amp;gt;
+&amp;lt;!-- 
+1. 使用jQuery获取特定元素的方式 伪类元素的使用
+2. toggle()  toggleClass()  slideToggle()
+ --&amp;gt;
+
+&amp;lt;!DOCTYPE html&amp;gt;
+
+
+	
+	test
+	
+		.tree{
+			width: 400px; 		
+		}
+		li{
+			font-size: 20px;
+			font-famil">
+<meta property="og:updated_time" content="2016-02-17T11:31:53.431Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Sunly">
+<meta name="twitter:description" content="&amp;lt;!-- js实现树结构 --&amp;gt;
+&amp;lt;!-- 
+1. 使用jQuery获取特定元素的方式 伪类元素的使用
+2. toggle()  toggleClass()  slideToggle()
+ --&amp;gt;
+
+&amp;lt;!DOCTYPE html&amp;gt;
+
+
+	
+	test
+	
+		.tree{
+			width: 400px; 		
+		}
+		li{
+			font-size: 20px;
+			font-famil">
 
 
 
@@ -87,7 +135,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | Sunly </title>
+  <title>  | Sunly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -227,7 +275,7 @@ Quick">
             
             
               
-                Hello World
+                
               
             
           </h1>
@@ -239,8 +287,8 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-01-17T15:30:53+08:00" content="2016-01-17">
-              2016-01-17
+            <time itemprop="dateCreated" datetime="2016-02-17T19:31:53+08:00" content="2016-02-17">
+              2016-02-17
             </time>
           </span>
 
@@ -250,8 +298,8 @@ Quick">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/17/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/17/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/02/17/tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/17/tree/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -272,16 +320,130 @@ Quick">
       
 
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <!-- js实现树结构 -->
+<!-- 
+1. 使用jQuery获取特定元素的方式 伪类元素的使用
+2. toggle()  toggleClass()  slideToggle()
+ -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style type="text/css">
+		.tree{
+			width: 400px; 		
+		}
+		li{
+			font-size: 20px;
+			font-family: "youyuan";
+		}
+		.li-foucs{
+			color: #111111;
+			list-style-image: url("./img/iconfont-wenjianjia-copy.svg");
+			cursor: pointer;
+		}
+		.li-jia{
+			list-style-image: url("./img/iconfont-wenjianjiadakaizhuangtai.svg");
+			
+		}
+		.li-munis{
+			list-style-image: url("./img/iconfont-wenjianjia-copy.svg");
+			
+		}
+		.li-none{
+			list-style-image: url('./img/iconfont-wenjian.svg');
+		}
+	</style>
+</head>
+<body>
+	<div class="tree">
+		<ul>
+			<li>物理
+				<ul>
+					<li>应用物理</li>
+					<li>理论物理</li>
+				</ul>
+			</li>
+			<li>计算机
+				<ul>
+					<li>计算机硬件</li>
+					<li>计算机软件</li>
+					<li>软件工程
+						<ul>
+							<li>C语言</li>
+							<li>JavaScript
+								<ul>
+									<li>javascript语法</li>
+									<li>DOM操作</li>
+								</ul>
+							</li>
+							<li>Python</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>英语
+				<ul>
+					<li>listening</li>
+					<li>speaking</li>
+					<li>writing</li>
+				</ul>
+			</li>
+			<li>数学
+					<ul>
+						<li>高数</li>
+						<li>线代</li>
+						<li>概率统计
+							<ul>
+								<li>概率论</li>
+								<li>数理统计</li>
+							</ul>
+						</li>
+					</ul>
+			</li>
+			<li>生物
+					<ul>
+						<li>细胞学</li>
+						<li>生态学</li>
+					</ul>
+			</li>
+			<li>化学
+					<ul>
+						<li>材料化学</li>
+						<li>分子化学</li>
+						<li>生物化学</li>
+					</ul>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="./jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("li:has(ul)").click(function(event){
+				if( this == event.target ){
+					if( $(this).children().is(":hidden") ){
+						$(this).removeClass("li-minus");
+						$(this).addClass("li-jia").children().slideDown(400);
+					}else{
+						$(this).removeClass("li-jia");
+						$(this).addClass("li-minus").children().slideUp(400);
+					}
+					// $(this).toggleClass("li-jia","li-minus");
+					// $($(this).children()).slideToggle(function(){
+					// 	$(this).show();
+					// },function(){						
+					// });
+				}
+				return false;
+			}).addClass("li-foucs").children().hide();
+				
+			$("li:not(:has(ul))").addClass("li-none");
+		});
+	</script>
+</body>
+</html>
       
     </div>
 
@@ -292,12 +454,16 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/01/17/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/17/tree/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/23/jQuery学习之选取和过滤元素/" rel="prev" title="jQuery学习：选取和过滤元素">
+                jQuery学习：选取和过滤元素 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -324,8 +490,8 @@ Quick">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/17/hello-world/"
-           data-title="Hello World" data-url="http://yoursite.com/2016/01/17/hello-world/">
+      <div class="ds-thread" data-thread-key="2016/02/17/tree/"
+           data-title="" data-url="http://yoursite.com/2016/02/17/tree/">
       </div>
     
   </div>
@@ -416,7 +582,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目錄</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
