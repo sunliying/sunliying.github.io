@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2016-03-19T15:15:34.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2016-03-19T15:15:29.147Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/28/using-svg/</loc>
+    
+    <lastmod>2016-02-29T01:09:17.822Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/26/angular-todolist-1/</loc>
+    
+    <lastmod>2016-02-26T02:22:18.630Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/26/bowerrc%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
+    
+    <lastmod>2016-02-24T14:58:42.090Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/26/%E8%AF%BB%E5%8F%96%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%90%8D%E5%92%8C%E5%B1%9E%E6%80%A7%E5%80%BC/</loc>
+    
+    <lastmod>2016-01-28T13:27:03.605Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/images/indiv.css</loc>
+    
+    <lastmod>2016-01-17T13:38:38.056Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/images/indiv.html</loc>
+    
+    <lastmod>2016-01-17T13:18:13.715Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/01/17/hello-world/</loc>
+    
+    <lastmod>2016-01-17T03:13:58.690Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/images/reset.css</loc>
+    
+    <lastmod>2015-11-16T14:14:24.979Z</lastmod>
+    
+  </url>
+  
+</urlset>

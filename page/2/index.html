@@ -60,7 +60,7 @@
 <meta name="description" content="点点滴滴的Web前端的学习历程">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sunly">
-<meta property="og:url" content="http://yoursite.com/tags/遍历对象/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Sunly">
 <meta property="og:description" content="点点滴滴的Web前端的学习历程">
 <meta name="twitter:card" content="summary">
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title> 標籤: 遍历对象 | Sunly </title>
+  <title> Sunly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -102,7 +102,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -191,47 +193,148 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        遍历对象
-        <small>標籤</small>
-      </h2>
-    </div>
+    
+
+    
+    
 
     
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
 
-      <h1 class="post-title">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/02/26/读取对象属性名和属性值/" itemprop="url">
-              
-                <span itemprop="name">选取对象的属性名和值</span>
-              
-            </a>
         
-      </h1>
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/26/bowerrc配置文件/" itemprop="url">
+                  .bowerrc
+                </a>
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-02-26T10:12:14+08:00"
-              content="2016-02-26" >
-          02-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-02-26T10:12:20+08:00" content="2016-02-26">
+              2016-02-26
+            </time>
+          </span>
 
-    </header>
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端自动化构建工具之bower/" itemprop="url" rel="index">
+                    <span itemprop="name">前端自动化构建工具之bower</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/26/bowerrc配置文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/26/bowerrc配置文件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。<br>.bowerrc 文件是bower的一个配置文件；可以这样讲： </p>
+<ul>
+<li><strong>bower.json指明项目所需要安装的依赖；</strong>      </li>
+<li><p><strong>.bowerrc文件则告诉bower要将依赖安装在哪里；</strong>   </p>
+<p>当然不只是这些功能，但是大致的功能可以这样将；<br>bower的默认目录为项目根目录下的bower_components，但是如果我们不想使用这个文件夹，则可以使用.bowerrc文件自定义下载依赖的目录。</p>
+<p>  { //.bowerrc</p>
+<pre><code>&quot;cwd&quot;: &quot;.&quot;,
+&quot;directory&quot;: &quot;app/bower_components&quot;
+</code></pre><p>  }</p>
+</li>
+</ul>
+<p>例如上面所示,注意：    </p>
+<ul>
+<li>要想使.bowerrc文件起作用，就必须在其所在目录或者子目录进行依赖下载</li>
+<li>所选取路径是相对于bowerrc文件的；</li>
+<li>若是路径中没有相应的文件，在下载依赖时，会自动生成相应的路径；</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </article>
 
 
     
-  </div>
+
+  </section>
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
