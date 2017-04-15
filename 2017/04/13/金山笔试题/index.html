@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="笔试题," />
+  <meta name="keywords" content="算法," />
 
 
 
@@ -64,7 +64,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/13/金山笔试题/index.html">
 <meta property="og:site_name" content="Sunly">
 <meta property="og:description" content="金山笔试题和答案">
-<meta property="og:updated_time" content="2017-04-12T16:25:48.157Z">
+<meta property="og:updated_time" content="2017-04-15T04:22:52.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="金山笔试题">
 <meta name="twitter:description" content="金山笔试题和答案">
@@ -280,7 +280,10 @@
 
       
         <h2 id="u7B14_u8BD5_u9898_u7B54_u6848"><a href="#u7B14_u8BD5_u9898_u7B54_u6848" class="headerlink" title="笔试题答案"></a>笔试题答案</h2><ol>
-<li>alert(1&amp;&amp;2)输出的结果值是？</li>
+<li><p>alert(1&amp;&amp;2)输出的结果值是？</p>
+<p> 输出结果应该是2，在js中，关系运算符并不一定会返回boolean值，根据传入值的类型不同会返回不同的值。<br> 可以返回对象、null、undefined、数值（NaN）、字符串、Boolean值；</p>
+<p> 另外其属于短路操作；</p>
+</li>
 <li><p>有如下函数：</p>
 <pre><code>Sum(2,3) =&gt;5
 Sum(2)(3)=&gt;5
@@ -328,7 +331,58 @@ document.inserteBefore(elem,relativeElem);
 document.getElementById(&quot;id&quot;);
 </code></pre></li>
 <li><p>请用原生JavaScript代码实现一个函数，功能是对JS对象的深度克隆。</p>
-</li>
+<pre><code>//js深度克隆
+
+//浅复制
+var shallowCopy = function(obj){
+    var objCopy = {};
+    for(var name in obj){
+        if (obj.hasOwnProperty(name)) {
+            objCopy[name] = obj[name];
+        }
+    }
+    return objCopy;
+};
+//深复制
+var deepCopy1 = function(obj){
+    var objCopy = {};
+    objCopy = JSON.parse(JSON.stringify(obj));
+    return objCopy;
+};
+var deepCopy2 = function deepCopy(obj,objCopy){
+    objCopy = objCopy||{};
+    for(var name in obj){
+        if (typeof obj[name] === &quot;Object&quot;) {
+            objCopy[name] = obj[name].prototype.constructor===&quot;Array&quot;?[]:{};
+            deepCopy(obj[name],objCopy[name]);
+        }else{
+            objCopy[name] = obj[name];
+        }
+    }
+};
+// 测试
+var a = {
+    name: &quot;class1&quot;,
+    number : 54,
+    student: {
+        &quot;201421&quot; : {
+            name: &quot;sunliying&quot;,
+            age: 21
+        },
+        &quot;201422&quot; :{
+            name: &quot;yan&quot;,
+            age: 22
+        }
+    },
+    teacher: [&quot;yangming&quot;,&quot;mudao&quot;]
+};
+var b = {};
+console.log(shallowCopy(a));  
+//注意，浅复制对对象是引用的，所有复制来的对象都指向同一个对象
+console.log(deepCopy1(a));
+deepCopy2(a,b);
+console.log(b);
+</code></pre></li>
 </ol>
 
       
@@ -338,7 +392,7 @@ document.getElementById(&quot;id&quot;);
       
         <div class="post-tags">
           
-            <a href="/tags/笔试题/" rel="tag">#笔试题</a>
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -354,6 +408,10 @@ document.getElementById(&quot;id&quot;);
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/14/js创建对象/" rel="prev" title="js创建对象">
+                js创建对象 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -425,21 +483,21 @@ document.getElementById(&quot;id&quot;);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
