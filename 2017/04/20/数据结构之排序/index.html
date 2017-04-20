@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="angular todolist," />
+  <meta name="keywords" content="排序," />
 
 
 
@@ -58,34 +58,16 @@
 
 
 
-<meta name="description" content="这是参照angular官网制作的备忘录，下面的代码地址： note/diary/Angular_20160123/0224-TODOlist.html 制作一个简单地angular备忘录应用，首先要明确以下步骤：一、 使用一个对象数组记录总事件，事件对象有三个属性，
-
-text内容    
-date到期时间    
-done完成情况 
-
-二、 记录数组长度，根据done的情况记录剩余事件个数；三、">
+<meta name="description" content="C++ 数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="angular_todolist">
-<meta property="og:url" content="http://yoursite.com/2016/02/26/angular-todolist-1/index.html">
+<meta property="og:title" content="数据结构之排序">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/数据结构之排序/index.html">
 <meta property="og:site_name" content="Sunly">
-<meta property="og:description" content="这是参照angular官网制作的备忘录，下面的代码地址： note/diary/Angular_20160123/0224-TODOlist.html 制作一个简单地angular备忘录应用，首先要明确以下步骤：一、 使用一个对象数组记录总事件，事件对象有三个属性，
-
-text内容    
-date到期时间    
-done完成情况 
-
-二、 记录数组长度，根据done的情况记录剩余事件个数；三、">
-<meta property="og:updated_time" content="2016-02-26T02:22:18.630Z">
+<meta property="og:description" content="C++ 数据结构">
+<meta property="og:updated_time" content="2017-04-20T13:41:03.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="angular_todolist">
-<meta name="twitter:description" content="这是参照angular官网制作的备忘录，下面的代码地址： note/diary/Angular_20160123/0224-TODOlist.html 制作一个简单地angular备忘录应用，首先要明确以下步骤：一、 使用一个对象数组记录总事件，事件对象有三个属性，
-
-text内容    
-date到期时间    
-done完成情况 
-
-二、 记录数组长度，根据done的情况记录剩余事件个数；三、">
+<meta name="twitter:title" content="数据结构之排序">
+<meta name="twitter:description" content="C++ 数据结构">
 
 
 
@@ -103,7 +85,7 @@ done完成情况
   };
 </script>
 
-  <title> angular_todolist | Sunly </title>
+  <title> 数据结构之排序 | Sunly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +215,7 @@ done完成情况
             
             
               
-                angular_todolist
+                数据结构之排序
               
             
           </h1>
@@ -245,8 +227,8 @@ done完成情况
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-26T10:11:43+08:00" content="2016-02-26">
-              2016-02-26
+            <time itemprop="dateCreated" datetime="2017-04-20T19:57:25+08:00" content="2017-04-20">
+              2017-04-20
             </time>
           </span>
 
@@ -259,8 +241,8 @@ done完成情况
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/angular/" itemprop="url" rel="index">
-                    <span itemprop="name">angular</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -275,8 +257,8 @@ done完成情况
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/26/angular-todolist-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/26/angular-todolist-1/" itemprop="commentsCount"></span>
+                <a href="/2017/04/20/数据结构之排序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/20/数据结构之排序/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -297,45 +279,80 @@ done完成情况
       
 
       
-        <p>这是参照angular官网制作的备忘录，下面的代码地址：<a href="/note/diary/Angular_20160123/0224-TODOlist.html" title="备忘录"> note/diary/Angular_20160123/0224-TODOlist.html </a><br>制作一个简单地angular备忘录应用，首先要明确以下步骤：<br>一、 使用一个对象数组记录总事件，事件对象有三个属性，</p>
-<ul>
-<li><strong>text内容</strong>    </li>
-<li><strong>date到期时间</strong>    </li>
-<li><strong>done完成情况</strong> </li>
-</ul>
-<p>二、 记录数组长度，根据done的情况记录剩余事件个数；<br>三、 使用ng-repeat来显示数组中的事件，并在每件事件前放置一个checkbox来记录是否完成，并以此来设置done的值。<br>四、 使用三个input框来输入事件、到期时间以及进行提交，每次提交事件对象会被保存在时间数组中并显示出来；<br>五、 设置清空按钮，点击会将done为true的事件对象从数组中删除；<br>六、 对date和当前时间进行比较，若是超过当前时间，则内容显示颜色改变；       </p>
-<h2 id="u672C_u4F8B_u6CE8_u610F"><a href="#u672C_u4F8B_u6CE8_u610F" class="headerlink" title="本例注意"></a>本例注意</h2><h3 id="1-__u4F7F_u7528_u7684_u63A7_u5236_u5BF9_u8C61"><a href="#1-__u4F7F_u7528_u7684_u63A7_u5236_u5BF9_u8C61" class="headerlink" title="1. 使用的控制对象"></a>1. 使用的控制对象</h3><p>本例中并没有使用<code>$scope</code> 全局对象来进行双向数据绑定，本例中使用的方式如下：</p>
-<ul>
-<li><p>在HTML模板中设置控制器时</p>
-<pre><code>&lt;div ng-controller = &quot;todoListCtrl as todoList&quot; &gt;
-</code></pre></li>
-<li><p>在js的controller中设置时如下：</p>
-<pre><code>    var app = angular.module(&quot;todoApp&quot;,[]);
- app.controller(&quot;todoListCtrl&quot;,function(){
- var todoList = this;
- todoList.addevent=function(){};
-});
-</code></pre></li>
-</ul>
-<p>此例中没有传入$scope对象，而相当于用一个todoList来作为这个模块的的一个对象，包含了一系列控制这个模块的属性和方法；</p>
-<h3 id="2-__u7981_u6B62_u7A7A_u767D_u63D0_u4EA4"><a href="#2-__u7981_u6B62_u7A7A_u767D_u63D0_u4EA4" class="headerlink" title="2. 禁止空白提交"></a>2. 禁止空白提交</h3><pre><code>var re_blank = /^[\s\u3000]*$/ig;
-if (re_blank.test(todoList.todoText)||todoList.todoText===undefined) {
-    alert(&apos;请输入内容&apos;);
-    return false;
-}else{
-    ...
-}
-</code></pre><p>最上面一行使用正则表达式检测半角、全角空格，但本例最初内容应该是undefined，在下一行进行检测。</p>
-<h3 id="3-__u65E5_u671F_u6BD4_u8F83"><a href="#3-__u65E5_u671F_u6BD4_u8F83" class="headerlink" title="3. 日期比较"></a>3. 日期比较</h3><p>首先说一说js中的date对象，当传入参数值，则值为参数表示的值（实际上传入的参数是经过后台Date.parse或者Date.UTC处理的），如不传入参数，则获取当前值；<br>对于日期的比较，是后台调用了Date类型的valueOf()方法，返回日期的毫秒表示， 所以是可以直接用日期进行比较的。</p>
-<pre><code>var date1 = new Date(2016,2,3);
-var date2 = new Date();
-if(date1&gt;date2){...}
-</code></pre><p>日期进行比较时，如上所示，是后台调用了valueOf()的方法，若是日期进行了格式化，如下：</p>
-<pre><code>var date1 = (new Date(2016,2,3)).toDateString();
-var date2 = new Date().toDateString();
-if(date1&gt;date2){...}
-</code></pre><p>这样是不能比较的。</p>
-<h3 id="4-_angular__u8868_u8FBE_u5F0F"><a href="#4-_angular__u8868_u8FBE_u5F0F" class="headerlink" title="4. angular 表达式"></a>4. angular 表达式</h3><p>angular的表达式中是可以进行简单运算的，并且js中的一些基本函数也可以在其中使用。</p>
+        <p>排序算法就是将一组数据元素按照某找顺序排列起来，便于查找<br>本文介绍几种常用的排序算法—插入排序、选择排序和冒泡排序，排序主要考虑的几点是时间性能、空间性能以及稳定性；   </p>
+<h2 id="u51E0_u79CD_u5E38_u89C1_u7684_u6392_u5E8F_u65B9_u6CD5_u603B_u7ED3"><a href="#u51E0_u79CD_u5E38_u89C1_u7684_u6392_u5E8F_u65B9_u6CD5_u603B_u7ED3" class="headerlink" title="几种常见的排序方法总结"></a>几种常见的排序方法总结</h2><h3 id="u63D2_u5165_u6392_u5E8F"><a href="#u63D2_u5165_u6392_u5E8F" class="headerlink" title="插入排序"></a>插入排序</h3><p><strong>直接插入排序</strong>   </p>
+<p>基本思想是在已经排序的序列上插入元素，使其有序； </p>
+<pre><code>var a = [1,2,5,6,74,45,78,54,32,13,9,34,26,28,12];
+var b = a;
+var insertSort = function(a){
+    var temp;
+    var i;
+    var j;
+    for (i = 0; i &lt; a.length; i++) {
+        temp = a[i];
+        for (j = i-1; j&gt;-1 &amp;&amp; temp&lt;a[j]; j--) {
+            a[j+1] = a[j];
+        }
+        a[j+1] = temp;
+    }
+};
+insertSort(a);  
+</code></pre><p>平均情况下，时间复杂度为O(n^2),当待排序列基本有序时，是不错的排序方法；<br>其空间复杂度是O(1);<br><strong>二分插入排序</strong><br>二分插入排序只是减少了比较次数，而没有改变元素的移动次数，因此其时间复杂度依然为O(n^2)   </p>
+<pre><code>binarySort = function(a){
+    var i,j,temp;
+    var low,mid,high;
+    for(i=0;i&lt;a.length;i++){
+        temp = a[i];
+        low = 0;
+        high = i-1;
+        while(low&lt;=high){
+            mid = Math.floor((low+high)/2);
+            if (temp&lt;a[mid]) {
+                high = mid-1;
+            }else{
+                low = mid;
+            }
+        }
+        for(j=i-1;j&gt;=low;j--){
+            a[j+1] = a[j];
+        }
+        a[low] = temp;
+    }
+};      
+</code></pre><h3 id="u76F4_u63A5_u9009_u62E9_u6392_u5E8F"><a href="#u76F4_u63A5_u9009_u62E9_u6392_u5E8F" class="headerlink" title="直接选择排序"></a>直接选择排序</h3><p>选择排序的基本思想是从待排序的元素集合中选取最小（大）的元素放到带排序元素的最前（后）；使得带排序元素集合不断地缩小；           </p>
+<pre><code>var selectSort = function(a){
+    var i, j , min;
+    var temp;
+    for(i = 0;i&lt;a.length-1;i++){
+        min = i;
+        for(j = i+1;j&lt;a.length;j++){
+            if (a[j]&lt;a[min]) {
+                min = j;
+            }
+        }
+        if (min!==i) {
+            temp = a[i];
+            a[i] = a[min];
+            a[min] = temp;
+        }
+    }
+};
+</code></pre><p>时间复杂度为O(n^2),空间复杂度为O(1)</p>
+<h3 id="u5192_u6CE1_u6392_u5E8F"><a href="#u5192_u6CE1_u6392_u5E8F" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>冒泡排序的基本思想是通过相邻元素之间的比较和交换，使得之比较大的元素逐渐从底部移向顶部；</p>
+<pre><code>var bubbleSort = function(a){
+    var i,j;
+    var temp;
+    for(i = 0;i&lt;a.length;i++){
+        for(j=0;j&lt;a.length-i;j++){
+            if (a[j]&gt;a[j+1]) {
+                temp = a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+        }
+    }
+};
+</code></pre><p>冒泡排序的时间复杂度是O(n^2);空间复杂度是O(1);冒泡排序的移动次数较多，在这几种方法中是最慢的一种。</p>
 
       
     </div>
@@ -344,7 +361,7 @@ if(date1&gt;date2){...}
       
         <div class="post-tags">
           
-            <a href="/tags/angular-todolist/" rel="tag">#angular todolist</a>
+            <a href="/tags/排序/" rel="tag">#排序</a>
           
         </div>
       
@@ -353,17 +370,13 @@ if(date1&gt;date2){...}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/17/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/04/17/js特点摘要/" rel="next" title="js特点摘要">
+                <i class="fa fa-chevron-left"></i> js特点摘要
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/28/using-svg/" rel="prev" title="using svg">
-                using svg <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -389,8 +402,8 @@ if(date1&gt;date2){...}
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/26/angular-todolist-1/"
-           data-title="angular_todolist" data-url="http://yoursite.com/2016/02/26/angular-todolist-1/">
+      <div class="ds-thread" data-thread-key="2017/04/20/数据结构之排序/"
+           data-title="数据结构之排序" data-url="http://yoursite.com/2017/04/20/数据结构之排序/">
       </div>
     
   </div>
@@ -481,7 +494,7 @@ if(date1&gt;date2){...}
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u672C_u4F8B_u6CE8_u610F"><span class="nav-number">1.</span> <span class="nav-text">本例注意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-__u4F7F_u7528_u7684_u63A7_u5236_u5BF9_u8C61"><span class="nav-number">1.1.</span> <span class="nav-text">1. 使用的控制对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-__u7981_u6B62_u7A7A_u767D_u63D0_u4EA4"><span class="nav-number">1.2.</span> <span class="nav-text">2. 禁止空白提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-__u65E5_u671F_u6BD4_u8F83"><span class="nav-number">1.3.</span> <span class="nav-text">3. 日期比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-_angular__u8868_u8FBE_u5F0F"><span class="nav-number">1.4.</span> <span class="nav-text">4. angular 表达式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u51E0_u79CD_u5E38_u89C1_u7684_u6392_u5E8F_u65B9_u6CD5_u603B_u7ED3"><span class="nav-number">1.</span> <span class="nav-text">几种常见的排序方法总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u63D2_u5165_u6392_u5E8F"><span class="nav-number">1.1.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u76F4_u63A5_u9009_u62E9_u6392_u5E8F"><span class="nav-number">1.2.</span> <span class="nav-text">直接选择排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5192_u6CE1_u6392_u5E8F"><span class="nav-number">1.3.</span> <span class="nav-text">冒泡排序</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
