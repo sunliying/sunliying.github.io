@@ -223,8 +223,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/12/bowerrc配置文件/" itemprop="url">
-                  .bowerrc
+                <a class="post-title-link" href="/2017/04/17/js特点摘要/" itemprop="url">
+                  js特点摘要
                 </a>
               
             
@@ -237,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-12T22:59:35+08:00" content="2017-04-12">
-              2017-04-12
+            <time itemprop="dateCreated" datetime="2017-04-17T11:50:16+08:00" content="2017-04-17">
+              2017-04-17
             </time>
           </span>
 
@@ -251,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端自动化构建/" itemprop="url" rel="index">
-                    <span itemprop="name">前端自动化构建</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -267,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/12/bowerrc配置文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/12/bowerrc配置文件/" itemprop="commentsCount"></span>
+                <a href="/2017/04/17/js特点摘要/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/17/js特点摘要/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -291,22 +291,14 @@
       
         
           
-            <p>之前一直使用npm来安装依赖，知道bower也是前端的一大包管理工具，今天一看，确实与npm的使用方式大同小异，npm使用package.json 来管理依赖，bower使用bower.json来管理依赖，另外比package.json 多了一个.bowerrc文件。<br>.bowerrc 文件是bower的一个配置文件；可以这样讲： </p>
+            <ol>
+<li>js自动类型转化</li>
+</ol>
+<p>在js中，不同类型之间进行运算时要注意是否有类型之间的转换；   </p>
 <ul>
-<li><strong>bower.json指明项目所需要安装的依赖；</strong>      </li>
-<li><p><strong>.bowerrc文件则告诉bower要将依赖安装在哪里；</strong>   </p>
-<p>当然不只是这些功能，但是大致的功能可以这样将；<br>bower的默认目录为项目根目录下的bower_components，但是如果我们不想使用这个文件夹，则可以使用.bowerrc文件自定义下载依赖的目录。</p>
-<p>  { //.bowerrc</p>
-<pre><code>&quot;cwd&quot;: &quot;.&quot;,
-&quot;directory&quot;: &quot;app/bower_components&quot;
-</code></pre><p>  }</p>
-</li>
-</ul>
-<p>例如上面所示,注意：    </p>
-<ul>
-<li>要想使.bowerrc文件起作用，就必须在其所在目录或者子目录进行依赖下载</li>
-<li>所选取路径是相对于bowerrc文件的；</li>
-<li>若是路径中没有相应的文件，在下载依赖时，会自动生成相应的路径；</li>
+<li>对象转换先调用valueOf方法，不行就再调用toString方法；</li>
+<li>字符比较比较的是字符编码</li>
+<li>关系操作符比较会尽量转换成数字（若其中一个是数字）</li>
 </ul>
 
           
@@ -333,7 +325,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -374,21 +366,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
