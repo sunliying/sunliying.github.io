@@ -64,7 +64,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/13/金山笔试题/index.html">
 <meta property="og:site_name" content="Sunly">
 <meta property="og:description" content="金山笔试题和答案">
-<meta property="og:updated_time" content="2017-04-15T04:22:52.787Z">
+<meta property="og:updated_time" content="2017-04-23T09:59:29.468Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="金山笔试题">
 <meta name="twitter:description" content="金山笔试题和答案">
@@ -241,8 +241,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔试题/" itemprop="url" rel="index">
-                    <span itemprop="name">笔试题</span>
+                  <a href="/categories/笔试/" itemprop="url" rel="index">
+                    <span itemprop="name">笔试</span>
                   </a>
                 </span>
 
@@ -352,8 +352,8 @@ var deepCopy1 = function(obj){
 var deepCopy2 = function deepCopy(obj,objCopy){
     objCopy = objCopy||{};
     for(var name in obj){
-        if (typeof obj[name] === &quot;Object&quot;) {
-            objCopy[name] = obj[name].prototype.constructor===&quot;Array&quot;?[]:{};
+        if (typeof obj[name] === &quot;object&quot;) {
+            objCopy[name] = obj[name] instanceof Array?[]:{};
             deepCopy(obj[name],objCopy[name]);
         }else{
             objCopy[name] = obj[name];
@@ -483,7 +483,7 @@ console.log(b);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -497,7 +497,7 @@ console.log(b);
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
