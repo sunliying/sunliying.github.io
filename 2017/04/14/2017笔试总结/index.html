@@ -80,7 +80,7 @@ for (var i = 0; i &amp;lt; 5; i++) {
     }(i),1000);
 }
 注意：对i值的引用，console的应该是传入">
-<meta property="og:updated_time" content="2017-04-15T04:24:09.224Z">
+<meta property="og:updated_time" content="2017-05-05T02:17:59.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017笔试总结">
 <meta name="twitter:description" content="每个一秒输出一个值；闭包和setTimeOut函数
@@ -312,7 +312,7 @@ for (var i = 0; i &amp;lt; 5; i++) {
         }
     }(i),1000);
 }
-</code></pre><p>注意：对i值的引用，console的应该是传入的字符copy的j值；否则最后调用i的时候都会是5；</p>
+</code></pre><p>注意：对i值的引用，console的应该是传入的字符copy的j值；否则最后调用i的时候都会是5；<br>用函数对事件函数进行封装，这样每一个函数和传入的i都拥有自己独立的作用域，所以每个i都是不一样的。</p>
 </li>
 <li><p>考察对象属性名的基本定义，对象自动转换成字符串</p>
 <pre><code>var a = {};
@@ -550,7 +550,7 @@ console.log(obj);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

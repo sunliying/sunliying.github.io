@@ -200,11 +200,6 @@
 
     
     
-      
-      
-
-      
-    
 
     
       
@@ -228,8 +223,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/14/2017笔试总结/" itemprop="url">
-                  2017笔试总结
+                <a class="post-title-link" href="/2017/04/17/js特点摘要/" itemprop="url">
+                  js特点摘要
                 </a>
               
             
@@ -242,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-14T23:28:08+08:00" content="2017-04-14">
-              2017-04-14
+            <time itemprop="dateCreated" datetime="2017-04-17T11:50:16+08:00" content="2017-04-17">
+              2017-04-17
             </time>
           </span>
 
@@ -256,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔试/" itemprop="url" rel="index">
-                    <span itemprop="name">笔试</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -272,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/14/2017笔试总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/14/2017笔试总结/" itemprop="commentsCount"></span>
+                <a href="/2017/04/17/js特点摘要/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/17/js特点摘要/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -297,153 +292,14 @@
         
           
             <ol>
-<li><p>每个一秒输出一个值；闭包和setTimeOut函数</p>
-<pre><code>for (var i = 0; i &lt; 5; i++) {
-    window.setTimeout(function(j){
-        return function(){
-            console.log(j);
-        }
-    }(i),1000);
-}
-</code></pre><p>注意：对i值的引用，console的应该是传入的字符copy的j值；否则最后调用i的时候都会是5；</p>
-</li>
-<li><p>考察对象属性名的基本定义，对象自动转换成字符串</p>
-<pre><code>var a = {};
-var b = {key:&apos;b&apos;};
-var c = {key:&apos;c&apos;};
-a[b] = 123;
-a[c] = 456;
-console.log(a[b]);
-
-//输出应该是 456
-</code></pre><p>js的对象属性值是字符串，如果你定义的<code>name</code>不是字符串，就会调用这个<code>name</code>的toString() 方法变成字符串来计算；</p>
-<pre><code>b.toString() // &quot;[object Object]&quot;
-a  // {[object Object]: &quot;123&quot;}
-</code></pre></li>
+<li>js自动类型转化</li>
 </ol>
-<ol>
-<li><p>考察基本闭包： 处输出值是？</p>
-<pre><code>var func = function(){
-    var secret = &apos;secret&apos;;
-    return {
-        get_secret: function(){
-            return secret;
-        },
-        change_secret: function(new_secret){
-            secret = new_secret;
-        }
-    };
-};
-var test = func();
-
-console.warn(test.get_secret());
-console.warn(test.secret);
-console.warn(test.change_secret(&quot;a new secret&quot;));
-console.warn(test.get_secret());
-
-//secret
-//undefined
-//undefined
-//a new secret
-</code></pre><p>第三个应该是输出<code>undefined</code>，而不是什么都不输出，因为在js中，一个函数总会返回一个值，如果没有指定返回值，则返回undefined。</p>
-</li>
-<li><p>考察数组去重，但不能够自动转换类型；</p>
-<pre><code>var noRepeat = function(oArr){
-    var aArr = [];
-    for (var i = 0; i &lt; oArr.length; i++) {
-        var isIn = false;
-        for (var j = 0; j &lt; aArr.length; j++) {
-            if (aArr[j]===oArr[i]) {
-                isIn = true;
-                break;
-            }
-        }
-        if (!isIn) {
-            aArr.push(oArr[i]);
-        }
-    }
-    return aArr;
-};
-
-var originArr = [0,1,2,3,&apos;1&apos;,&apos;3&apos;,&apos;4&apos;,&apos;3&apos;,0,3,3,2,4];
-var afterArr = noRepeat(originArr);
-console.log(afterArr);
-</code></pre><p>基本方法是定义一个新的数组，遍历原数组，对于原数组中的每个值，遍历新数组，当新数组中有值时，将布尔值isIn设为true，并跳出内层循环，若isIn没有变还是false，就在新数组中添加当前元素值。最后返回新数组；</p>
-</li>
-<li><p>考察字符串知识</p>
-<pre><code>var s1 = &apos;youareindeedalovelygirliloveyousomuch&apos;;
-var s2 = &apos;arechmusoyouelovilgirclovlyeaineeddyou&apos;;
-var findAn = function(s1,s2){
-    sArr1 = s1.split(&apos;&apos;);
-    sArr2 = s2.split(&apos;&apos;);
-    sArr1.sort();
-    sArr2.sort();
-    for (var i = 0; i &lt; sArr1.length; i++) {
-        if (sArr1[i]!==sArr2[i]) {
-            return sArr2[i];
-        }
-    }
-    return sArr2[sArr2.length-1];
-};
-var chara = findAn(s1, s2);
-console.log(chara);
-</code></pre><p>先使用字符串的split方法将字符串变为数组，然后用sort方法进行排序，排序之后判断对应位置的字符，若不相等，则s2的当前字符就是多余的；</p>
-</li>
-<li><p>查找字符串中出现的最多的字符和个数</p>
-<pre><code>var searchMChar = function(str){
-    var obj = {};
-
-    for (var i = 0; i &lt; str.length; i++) {
-        obj[str[i]] = obj[str[i]]===undefined?1:obj[str[i]]+1;
-    }
-    console.log(obj);
-    var maxCount = obj[str[0]];
-    var maxName = str[0];
-    for(var c in obj){
-        if (obj[c]&gt;maxCount) {
-            maxCount = obj[c];
-            maxName = c;
-        }
-    }
-    return {
-        maxCount: maxCount,
-        maxName: maxName
-    };
-};
-var str = &quot;she&apos;s a lovely lovely girl!&quot;;
-var obj = searchMChar(str);
-console.log(obj);
-</code></pre><p>使用一个对象来保存每个字符和对应出现的次数；注意在对象存执的时候是可以直接根据属性名获取相应的属性值，不用判断属性名和当前字符相等时才进行操作。。。<br>另外，属性没有时，其值为undefined。<br>另外，还可以使用正则的方式来计算：</p>
-<pre><code>var searchMChar = function (str){
-    var num=0;
-    var value=null;
-    var new_str=str.split(&quot;&quot;).sort().join(&quot;&quot;);//得到排序后的新的字符串
-    var re=/(\w)\1+/g;  //只匹配字符               
-    //没有\1,re就是一整个排好序的字符串
-    //有了\1就是出现过的有重复的取出来，\1表示跟前面第一个子项是相同的
-    //捕获组
-    new_str.replace(re,function($0,$1){    
-    //$0代表取出来重复的一个个整体，如[s,s...],[f,f..],[d,d....]  
-    //$1代表这个整体里的字符
-        console.log($0,$1);
-        if(num&lt;$0.length){
-            num=$0.length;
-            value=$1;
-        }
-    });
-    return {
-        maxCount: num,
-        maxName: value
-    };
-};
-var str = &quot;she&apos;s a lovely lovely girl!&quot;;
-var obj = searchMChar(str);
-console.log(obj);
-</code></pre><p>在字符串的匹配方法中，有一个replace方法，它的第二个参数可以是函数，函数的参数是如下定义的：<br>当没有捕获组的时候，函数有三个参数：模式的匹配项、模式匹配项子字符串中的位置、原字符串<br>当有捕获组的时候，函数的第二个参数以及之后分别是对应的捕获组，模式匹配项子字符串中的位置、原字符串是最后两个参数。<br>正则每匹配一个字符串的项，就会传入函数中进行处理；</p>
-</li>
-</ol>
-<p>以上一些算法是对字符串和数组的操作等，但是大多没有考虑到算法优化的问题。</p>
-<p>参考资料：<br>【1】 Js练习题之查找字符串中出现最多的字符和个数 <a href="http://www.cnblogs.com/zhangwenkan/p/4206208.html" target="_blank" rel="external">http://www.cnblogs.com/zhangwenkan/p/4206208.html</a></p>
+<p>在js中，不同类型之间进行运算时要注意是否有类型之间的转换；   </p>
+<ul>
+<li>对象转换先调用valueOf方法，不行就再调用toString方法；</li>
+<li>字符比较比较的是字符编码</li>
+<li>关系操作符比较会尽量转换成数字（若其中一个是数字）</li>
+</ul>
 
           
         
@@ -469,7 +325,7 @@ console.log(obj);
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -510,7 +366,7 @@ console.log(obj);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

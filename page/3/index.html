@@ -223,8 +223,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/23/XSS和CSRF跨站攻击/" itemprop="url">
-                  XSS和CSRF跨站攻击
+                <a class="post-title-link" href="/2017/05/03/网页布局总结/" itemprop="url">
+                  网页布局总结
                 </a>
               
             
@@ -237,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-23T10:58:47+08:00" content="2017-04-23">
-              2017-04-23
+            <time itemprop="dateCreated" datetime="2017-05-03T22:50:40+08:00" content="2017-05-03">
+              2017-05-03
             </time>
           </span>
 
@@ -251,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/网络安全/" itemprop="url" rel="index">
-                    <span itemprop="name">网络安全</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -267,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/23/XSS和CSRF跨站攻击/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/23/XSS和CSRF跨站攻击/" itemprop="commentsCount"></span>
+                <a href="/2017/05/03/网页布局总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/03/网页布局总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -291,42 +291,104 @@
       
         
           
-            <h3 id="1-_XSS_u653B_u51FB_uFF1A_u8DE8_u7AD9_u811A_u672C_u653B_u51FB_28Cross_Site_Scripting_29"><a href="#1-_XSS_u653B_u51FB_uFF1A_u8DE8_u7AD9_u811A_u672C_u653B_u51FB_28Cross_Site_Scripting_29" class="headerlink" title="1. XSS攻击：跨站脚本攻击(Cross Site Scripting)"></a>1. XSS攻击：跨站脚本攻击(Cross Site Scripting)</h3><ul>
-<li>攻击原理：Web应用未对用户提交请求的数据做充分的检查过滤，允许用户在提交的数据中掺入HTML代码(最主要的是“&gt;”、“&lt;”)，并将未经转义的恶意代码输出到第三方用户的浏览器解释执行，是导致XSS漏洞的产生原因。   理论上，所有可输入的地方没有对输入数据进行处理的话，都会存在XSS漏洞，漏洞的危害取决于攻击代码的威力，攻击代码也不局限于script。</li>
-<li>存储型XSS：<strong>输入–进入数据库–取出数据库–输出；</strong>持久化，代码是存储在服务器中的，如在个人信息或发表文章等地方，加入代码，如果没有过滤或过滤不严，那么这些代码将储存到服务器中，用户访问该页面的时候触发代码执行</li>
-<li>反射性XSS：<strong>输入–输出；</strong>非持久化，需要欺骗用户自己去点击链接才能触发XSS代码。攻击者将有问题的url通过某些途径传播开来，不明真相的用户一旦点击了这样的url，相应cookie数据就会被发送事先设定好的站点，这样子就盗得了用户的cookie信息，然后就可以利用Websleuth之类的工具来检查是否能盗取那个用户的账户。</li>
-<li>XSS防御： <ul>
-<li>完善的过滤体系，永远不相信用户的输入。需要对用户的输入进行处理，只允许输入合法的值，其它值一概过滤掉。</li>
-<li>Html encode。对标签进行转换。不同的插入地方（URL，HTML、css、js）设置不同的编码方式。假如某些情况下，我们不能对用户数据进行严格的过滤，那我们也需要对标签进行转换。在展现时浏览器会对这些字符转换成文本内容显示，而不是一段可执行的代码。<ul>
-<li>Http-Only。该属性有助于缓解跨站点脚本威胁， 如果兼容浏览器接收到 Http-Only Cookie，则客户端脚本不能对它进行访问。Http-Only的参数跟domain等其他参数一样，一旦Http-Only被设置，你在浏览器的document对象中就看不到Cookie了，而浏览器在浏览的时候不受任何影响，因为Cookie会被放在浏览器头中发送出去（包括ajax的时候），应用程序也一般不会在js里操作这些敏感Cookie的，对于一些敏感的Cookie我可以采用Http-Only，对于一些需要在网站中用js操作的cookie我们就不予设置，这样就保障了Cookie信息的安全也保证了网站的基本功能。</li>
+            <h3 id="u81EA_u9002_u5E94_u8BBE_u8BA1"><a href="#u81EA_u9002_u5E94_u8BBE_u8BA1" class="headerlink" title="自适应设计"></a>自适应设计</h3><ul>
+<li>自动识别屏幕宽度，并对其作出相应的调整的网页设计。</li>
+<li>自适应布局等于使用固定分割点来进行布局。</li>
+<li>当固定宽度与流动宽度结合起来时，自适应布局就是一种响应式设计，而不仅仅是它的一种替代方法。​<h3 id="u54CD_u5E94_u5F0F_u5E03_u5C40"><a href="#u54CD_u5E94_u5F0F_u5E03_u5C40" class="headerlink" title="响应式布局"></a>响应式布局</h3></li>
+<li>响应式网页设计是自适应网页设计的子集。响应式网页设计指的是页面的布局（流动网格、灵活的图像- 及媒介查询）。总体目标就是去解决设备多样化问题。</li>
+<li>响应式布局等于流动网格布局。</li>
+<li><p>使用方案：</p>
+<ul>
+<li>媒体查询（根据不同的设备宽度和高度来加载不同的样式，根据固定分割点来布局）</li>
+<li>viewport标签（控制视窗口的大小，将视口宽度设置为设备宽度；并且把最初的缩放比例设置为1；还可以设置用户是否可以进行页面大小缩放）；<ul>
+<li>width：可设定数值，或者指定为 device-width</li>
+<li>height：可设定数值，或者指定為 device-height</li>
+<li>initial-scale：第一次进入页面的初始比例</li>
+<li>minimum-scale：允许缩小最小比例</li>
+<li>maximum-scale：允许放大最大比例</li>
+<li>user-scalable：允许使用者缩放，1 or 0 (yes or no)</li>
 </ul>
 </li>
+<li>不要使用绝对宽度，要使用百分比；</li>
+<li>字体不要使用绝对大小，要使用相对大小rem或em；</li>
+<li>流动布局（使用float进行布局）<ul>
+<li>float的好处是，如果宽度太小，放不下两个元素，后面的元素会自动滚动到前面元素的下方，不会在水平方向overflow（溢出），避免了水平滚动条的出现。</li>
 </ul>
 </li>
-<li>参考资料<ol>
-<li><a href="http://blog.csdn.net/ghsau/article/details/17027893" target="_blank" rel="external"> XSS攻击及防御</a></li>
-<li><a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/09.3.md" target="_blank" rel="external">避免XSS攻击</a></li>
-<li><a href="http://www.freebuf.com/articles/web/9977.html" target="_blank" rel="external">防御XSS的七条原则</a></li>
-<li><a href="https://www.biaodianfu.com/http-only-cookie-xss.html" target="_blank" rel="external">使用Http-only Cookie来防止XSS攻击</a><h3 id="2-_CSRF_28_Cross_Site_Request_Forgery_29_2C__u8DE8_u7AD9_u57DF_u8BF7_u6C42_u4F2A_u9020"><a href="#2-_CSRF_28_Cross_Site_Request_Forgery_29_2C__u8DE8_u7AD9_u57DF_u8BF7_u6C42_u4F2A_u9020" class="headerlink" title="2. CSRF( Cross Site Request Forgery), 跨站域请求伪造."></a>2. CSRF( Cross Site Request Forgery), 跨站域请求伪造.</h3></li>
+<li>Flexbox弹性盒子布局</li>
+<li>图片的自动缩放，等比缩放<h3 id="Flexbox_u5F39_u6027_u76D2_u5B50_u5E03_u5C40"><a href="#Flexbox_u5F39_u6027_u76D2_u5B50_u5E03_u5C40" class="headerlink" title="Flexbox弹性盒子布局"></a>Flexbox弹性盒子布局</h3>The flexbox layout is a new CSS3 module for page layout. It can lay out items in a direction (left-to-right or top-to-bottom) with the items stretching to take up the available space. Quite complicated layouts can be built up by nesting flex containers.</li>
+</ul>
+</li>
+<li><p>A flexbox layout is made up of a flex container and flex items inside the container.</p>
+</li>
+<li>A flex container is a HTML element with its display property set to flex. Any item inside a flex container is automatically a flex item.</li>
+</ul>
+<p>使用flexbox弹性布局，可以实现以下方案：</p>
+<ul>
+<li>定宽和自适应相结合，并可以设置自适应的盒子分享剩余宽度的百分比；</li>
+<li>轻松实现多栏布局</li>
+</ul>
+<p>基本属性和用法：<br><strong>flex container 的属性设置</strong></p>
+<ol>
+<li><p>display(flex container)</p>
+<pre><code>flex inline-flex
+</code></pre></li>
+<li><p>flex-direction(flex-container)  </p>
+<pre><code>flex-direction: row|row-reverse|column|column-reverse
+</code></pre></li>
+<li><p>flex-wrap(flex-container)</p>
+<pre><code>flex-wrap: nowrap|wrap|wrap-reverse
+</code></pre></li>
+<li>flex-flow(flex container)<br>这是<code>flex-direction</code>和<code>flex-wrap</code>属性的缩写版本，默认值是<code>row nowrap</code></li>
+<li><p>justify-content(flex-container)</p>
+<pre><code>justify-content: flex-start|flex-end|center|space-between|space-around
+</code></pre><p>相当于水平方向调节对齐方式<br>与内部元素设置了margin: auto 相对影响</p>
+</li>
+<li><p>align-items（flex container）</p>
+<pre><code>align-items: flex-start | flex-end | center | baseline | stretch
+</code></pre></li>
+<li><p>align-content(flex container)</p>
+<pre><code>align-content: flex-start|flex-end|center|space-around|stretch
+</code></pre><p>相当于竖直方向上调整对齐方式;多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+</li>
 </ol>
-</li>
-<li>攻击简介<ul>
-<li>一个跨站请求伪造攻击迫使登录用户的浏览器将伪造的HTTP请求,包括该用户的会话 cookie 和其他认证信息,发送到一个存在漏洞的web应用程序。这就允许了攻击者迫使用户浏览器向存在漏洞的应用程序发送请求,而这些请求会被应用程序认为是用户的合法请求。</li>
-<li>csrf攻击.黑客不能拿到cookie,也没办法对服务器返回的内容进行解析.唯一能做的就是给服务器发送请求.通过发送请求改变服务器中的数据.</li>
+<p><strong>flex-item的属性设置</strong>       </p>
+<ul>
+<li>order(order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。)</li>
+<li>flex-grow(flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大)</li>
+<li>flex-shrink(flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小)</li>
+<li>flex-basis(flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间)</li>
+<li>flex。flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</li>
+<li>align-self(align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。)  </li>
 </ul>
-</li>
-<li>攻击原理<br>  -请求时，浏览器自动发送会话cookie等认证凭证，攻击者能创建恶意web页面产生伪造请求。这些伪造请求很难与合法请求分开。 cookie 是浏览器自动携带的，这很关键。</li>
-<li>攻击预防<ul>
-<li>referer 验证（验证http请求的原地址）</li>
-<li>token 验证（在表单中加入了一个随机的token来验证。攻击者没有办法获取到页面信息,所以它没有办法知道token的值.那么伪造的表单中就没有该token值.服务器就可以判断出这个请求是伪造的.）</li>
+<h3 id="u4E24_u680F_u5E03_u5C40_u548C_u4E09_u680F_u5E03_u5C40"><a href="#u4E24_u680F_u5E03_u5C40_u548C_u4E09_u680F_u5E03_u5C40" class="headerlink" title="两栏布局和三栏布局"></a>两栏布局和三栏布局</h3><ul>
+<li>使用两边浮动，中间设置margin自适应的方法；</li>
+<li>使用两边绝对定位，中间设置margin自适应的方法；</li>
+<li>两侧自适应，中间定宽</li>
+<li>等高设置，主要使用清除浮动来设置</li>
 </ul>
-</li>
-<li>参考资料<ul>
-<li><a href="https://segmentfault.com/a/1190000007932293" target="_blank" rel="external">CSRF攻击原理及预防手段</a></li>
-<li><a href="https://www.ibm.com/developerworks/cn/web/1102_niugang_csrf/" target="_blank" rel="external">CSRF 攻击的应对之道</a></li>
-<li><a href="https://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html" target="_blank" rel="external">浅谈CSRF攻击方式</a></li>
+<p>问题来了：</p>
+<ul>
+<li>中间的框不设置宽度自动适应剩余的宽度，是继承了父元素吗？可以自动拥有宽度？</li>
 </ul>
-</li>
+<p>两栏布局和三栏布局的基本要点：</p>
+<ul>
+<li>首先，这种布局方式要结合浮动或者绝对定位来实现；</li>
+<li>其次，浮动元素和绝对定位元素脱离了文档流，主元素要设置margin来空留地方</li>
+<li>主元素的宽度不用设置，是自适应的，自适应的元素是不能够设置成浮动或者是绝对定位的。多个自适应的框要根据分配给不同的框不同的<strong>百分比</strong>；</li>
+<li>margin的设定可以使float或者绝对定位元素存在于任何地方（正负值都有用）；</li>
+</ul>
+<p>等高布局的要点：</p>
+<ul>
+<li>首先，因为整个外框清楚了浮动，整个大外框的高度会随着盒内最高的元素增加；在外面看，就像是另一个盒子（同级的）随着一个盒子的增高而增高，但是两个盒子的顺序是不能变的。</li>
+</ul>
+<h3 id="u5782_u76F4_u5C45_u4E2D_u7684_u5B9E_u73B0_u65B9_u6CD5"><a href="#u5782_u76F4_u5C45_u4E2D_u7684_u5B9E_u73B0_u65B9_u6CD5" class="headerlink" title="垂直居中的实现方法"></a>垂直居中的实现方法</h3><p>使用display:absolute来实现；设置margin-left,margin-top,top,left;</p>
+<p>参考资料：</p>
+<ul>
+<li><a href="http://www.cnblogs.com/jununx/p/3336553.html" target="_blank" rel="external">两栏布局，三栏布局，等高布局，流式布局</a></li>
+<li><a href="http://www.alloyteam.com/2015/04/zi-shi-ying-she-ji-yu-xiang-ying-shi-wang-ye-she-ji-qian-tan/" target="_blank" rel="external">自适应设计与响应式网页设计</a></li>
+<li><a href="http://helephant.com/2013/03/23/css3-flexbox-layout/" target="_blank" rel="external">Using the CSS3 flexbox layout</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></li>
 </ul>
 
           
@@ -353,7 +415,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -394,7 +456,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

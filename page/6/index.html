@@ -223,8 +223,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/22/移动端前端开发/" itemprop="url">
-                  移动端前端开发
+                <a class="post-title-link" href="/2017/04/23/js判断两个变量是否相等/" itemprop="url">
+                  js判断两个变量是否相等
                 </a>
               
             
@@ -237,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-22T18:33:52+08:00" content="2017-04-22">
-              2017-04-22
+            <time itemprop="dateCreated" datetime="2017-04-23T09:22:29+08:00" content="2017-04-23">
+              2017-04-23
             </time>
           </span>
 
@@ -251,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/移动端开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动端开发</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -267,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/22/移动端前端开发/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/22/移动端前端开发/" itemprop="commentsCount"></span>
+                <a href="/2017/04/23/js判断两个变量是否相等/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/23/js判断两个变量是否相等/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -290,109 +290,12 @@
 
       
         
-          
-            <p>移动端的设计方案：</p>
-<ol>
-<li><p>js和CSS跨平台</p>
-<ul>
-<li>尽量使用原生js，不使用框架，框架太大，加载速度慢</li>
-</ul>
-<ol>
-<li>zepto 精简的jquery</li>
-<li>大小需要自适应的图标做成字体</li>
-<li>根据项目模块化移动端的常用组件<ol>
-<li>touch对应的swipe事件</li>
-<li>各种滑动翻页效果</li>
-<li>拉拽刷新</li>
-</ol>
-</li>
-<li><p>字体设置选择无衬线字体</p>
-<pre><code>body {
-    font-family: &quot;Helvetica Neue&quot;, Helvetica, STHeiTi, sans-serif;
-}
-</code></pre></li>
-<li><p>设置全局的CSS样式，避免图中的长按弹出菜单与选中文本的行为</p>
-<pre><code>a, img {
-    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
-}
-html, body {
-    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
-    user-select: none;
-}
-</code></pre></li>
-</ol>
-</li>
-<li><p>移动端布局</p>
-<ul>
-<li><p>media媒体查询功能；根据视口大小，解析度，方向等，选择性应用内容样式。</p>
-<pre><code>@media screen and (min-width:750px) and (max-width:799px) {
-    html {
-        font-size: 23.5px
-    }
-}
-</code></pre></li>
-</ul>
-<ol>
-<li><p>viewport meta标签；指定在用户设备的浏览器中的网页的缩放比例</p>
-<ul>
-<li>viewport的功能是浏览器布局实现中用来约束网页中最顶级块级元素<html>的。viewport实际上等于浏览器窗口，它的大小是由浏览器特性所决定的，一旦页面渲染完成，无所是缩放操作还是其他什么操作都不会让它变化。 那么我们可以用<html>元素来度量它。</html></html></li>
-</ul>
-<ol>
-<li>移动端的viewport会比PC端的稍微复杂一点，分为layout viewport和visual viewport。visual viewport是页面当前显示在屏幕上的部分，用户可以通过滚动来改变他所看到的页面部分，或者通过缩放来改变visual viewport的大小。layout viewport就是一个页面渲染之后具有固定大小的大框，跟之前提到PC上的概念相似，我们知道它的大小是由浏览器特性来决定的。</li>
-<li>document.documentElement.clientWidth/Height就是viewport的大小</li>
-<li>度量visual viewport是通过window.innerWidth/Height来度量的，当然单位也是CSS像素。</li>
-<li>放大或缩小是改变了CSS像素与设备像素的比值</li>
-<li><p>设置如下</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-</code></pre><p>它的作用是调整layout viewport的宽度；</p>
-</li>
-</ol>
-</li>
-<li><p>页面布局<br>各有优缺点：</p>
-<ul>
-<li>流式布局<ul>
-<li>流式布局实际上就是百分比宽度 + 固定高度</li>
-<li>border-radius等不能等比缩放</li>
-</ul>
-</li>
-<li>响应式布局</li>
-<li>rem<ul>
-<li>使用rem，是HTML fontsize倍数的表示；em是父元素fontsize的倍数表示；</li>
-<li>本来16px的字显示已经够大，但由于使用了rem，在屏幕变大的同时，字体变大或导致翻页</li>
-</ul>
-</li>
-<li>flex弹性盒子布局</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>性能优化<ol>
-<li>图片优化。 为了解决那些带宽小或者流量费用昂贵的用户，你可以通过根据用户的屏幕尺寸和分辨率加载合适的图片来优化图片的加载。你可以通过媒体查询来获取屏幕的 height，width 以及 pixel ratio。</li>
-<li>压缩</li>
-<li>数据离线化，考虑将数据缓存在 localStorage</li>
-<li>能用css画的图不要用图片，尽量使用css动画</li>
-</ol>
-</li>
-<li>屏幕分辨率PPI（理解CSS像素与设备像素）<ol>
-<li>PPI全称为Pixel Per Inch，译为每英寸像素取值，更确切的说法应该是像素密度，也就是衡量单位物理面积内拥有像素值的情况。</li>
-<li>一个设备的PPI是一个定值</li>
-<li>移动端下PPI增高，要注意设计页面的时候图像的分辨率问题。</li>
-<li>同时默认分辨率情况下，一个点物理像素点对应于一个分辨率像素。</li>
-</ol>
-</li>
-</ol>
-<p><strong>参考资料：</strong>          </p>
-<ol>
-<li><a href="https://www.zhihu.com/question/20269059" target="_blank" rel="external">移动前端开发和 Web 前端开发的区别是什么？</a></li>
-<li><a href="http://liujinkai.com/2015/06/06/mobile-web-skill/" target="_blank" rel="external">移动端web开发技巧</a></li>
-<li><a href="http://www.infoq.com/cn/articles/development-of-the-mobile-web-deep-concept" target="_blank" rel="external">浅谈移动Web开发（上）：深入概念</a></li>
-<li><a href="http://imweb.io/topic/56b421c15c49f9d377ed8eef" target="_blank" rel="external">移动端web开发入门笔记</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta" target="_blank" rel="external">MDN meta标签</a></li>
-<li><a href="http://alloyteam.github.io/Spirit/modules/Standard/" target="_blank" rel="external">移动开发规范概述</a></li>
-<li><a href="http://www.restran.net/2015/05/14/mobile-web-front-end-collections/" target="_blank" rel="external">移动端 Web 开发前端知识整理</a></li>
-</ol>
-
-          
+          判断两个变量是否相等
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/04/23/js判断两个变量是否相等/">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -416,7 +319,7 @@ html, body {
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -457,7 +360,7 @@ html, body {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

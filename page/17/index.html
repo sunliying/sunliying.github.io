@@ -223,8 +223,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/28/using-svg/" itemprop="url">
-                  using svg
+                <a class="post-title-link" href="/2017/04/12/从键入URL到页面加载完毕发生了什么/" itemprop="url">
+                  从键入URL到页面加载完毕发生了什么
                 </a>
               
             
@@ -237,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-28T16:01:31+08:00" content="2016-02-28">
-              2016-02-28
+            <time itemprop="dateCreated" datetime="2017-04-12T22:54:56+08:00" content="2017-04-12">
+              2017-04-12
             </time>
           </span>
 
@@ -251,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/高性能网站/" itemprop="url" rel="index">
-                    <span itemprop="name">高性能网站</span>
+                  <a href="/categories/web基础知识/" itemprop="url" rel="index">
+                    <span itemprop="name">web基础知识</span>
                   </a>
                 </span>
 
@@ -267,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/28/using-svg/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/28/using-svg/" itemprop="commentsCount"></span>
+                <a href="/2017/04/12/从键入URL到页面加载完毕发生了什么/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/12/从键入URL到页面加载完毕发生了什么/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -290,99 +290,12 @@
 
       
         
-          
-            <p>svg是一种使用XML来描述二维图形和绘图程序的语言。svg格式图片是一种矢量图片，英文原名为Scalable Vector Graphics，是万维网联盟的标准，并与诸如DOM，XSL之类的W3C标准是一个整体。它主要由以下几个特点：    </p>
-<ul>
-<li>可伸缩，在任何分辨率下都具有高质量，不变形</li>
-<li>是纯XML文本，读取和修改更加容易</li>
-<li>和png、GIF相比，可压缩性更强，尺寸更小<h3 id="u5BFB_u627E_u9002_u5408_u7684svg_u56FE_u7247"><a href="#u5BFB_u627E_u9002_u5408_u7684svg_u56FE_u7247" class="headerlink" title="寻找适合的svg图片"></a>寻找适合的svg图片</h3>我们可以在：<br><a href="https://icomoon.io/app/#/select" title="icomoon" target="_blank" rel="external">icomoon</a>或者<a href="http://iconfont.cn/" title="阿里妈妈" target="_blank" rel="external">http://iconfont.cn/</a>上面获取svg图片，直接下载svg格式的图片到本地。    </li>
-</ul>
-<p>在<a href="http://iconfont.cn/" title="阿里妈妈" target="_blank" rel="external">http://iconfont.cn/</a>里获取的svg图片是以一份XML的文档形式储存的，下载的时候会让你选择图片的格式，大小和颜色，最后下载的图片用编辑器打开会发现svg里面已经有相匹配的属性，如下是一个完整的svg图片代码：     </p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
-&lt;svg style=&quot;width:20px;height:20px;&quot; version=&quot;1.1&quot; id=&quot;图形&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; width=&quot;30px&quot; height=&quot;30px&quot; viewBox=&quot;0 0 1261 1024&quot; enable-background=&quot;new 0 0 1261 1024&quot; xml:space=&quot;preserve&quot;&gt;
-  &lt;path class=&quot;svgpath&quot; data-index=&quot;path_0&quot; fill=&quot;#ea8010&quot; d=&quot;M236.307692 393.846154l-236.307692 630.153846 1024 0 236.307692-630.153846L236.307692 393.846154zM1024 315.076923 1024 157.538462 512 157.538462l-157.538462-157.538462L0 0l0 1024 157.538462-708.923077L1024 315.076923zM1024 315.076923&quot; /&gt;
-
-&lt;/svg&gt;
-</code></pre><p>在这里面，已经下载好了一个svg图片文件，有上面可以看出，这个文件里已经写好了内联的样式属性，所以，如果我们想要使用css样式来改变其样式，就会显得</p>
-<h3 id="svg_u56FE_u7247_u7684_u5355_u6587_u4EF6_u5F15_u5165_u65B9_u5F0F"><a href="#svg_u56FE_u7247_u7684_u5355_u6587_u4EF6_u5F15_u5165_u65B9_u5F0F" class="headerlink" title="svg图片的单文件引入方式"></a>svg图片的单文件引入方式</h3><p>以下这几种方式都是单文件引入图片，这样引入会增加http的请求数，并且都不能使用css样式改变其颜色。</p>
-<ul>
-<li><p>直接使用img标签引入图片：     </p>
-<p>  <code>&lt;li&gt;&lt;img src=&quot;../DOM_20160118/img/iconfont-wenjian.svg&quot;&gt;file3&lt;/li&gt;</code></p>
-<ul>
-<li>使用img引入的方式就像平常引入img图片一样，只是格式不同；</li>
-<li>可以在css中设置其宽高，并不会受svg标签中内联样式的约束；</li>
-</ul>
-</li>
-<li><p>使用<code>&lt;embed&gt;</code>标签引入图片：</p>
-<p>  <code>&lt;embed src=&quot;../DOM_20160118/img/iconfont-wenjian.svg&quot; type=&quot;image/svg+xml&quot; /&gt;</code><br>可调整宽高</p>
-</li>
-<li><p>使用<code>&lt;object&gt;</code>标签引入图片：</p>
-<p>  <code>&lt;object data=&quot;../DOM_20160118/img/iconfont-wenjian.svg&quot; type=&quot;image/svg+xml&quot;&gt; &lt;/object&gt;</code><br>可调整宽高</p>
-</li>
-<li><p>使用<code>&lt;iframe&gt;</code>标签引入图片：</p>
-<p>  <code>&lt;iframe src=&quot;../DOM_20160118/img/iconfont-wenjian.svg&quot;&gt;&lt;/iframe&gt;</code><br>使用iframe引入的话，引入的是一个框，设置宽高设置的都是框的宽高，不会改变图片</p>
-<h3 id="u7528svg_u6807_u7B7E_u76F4_u63A5_u653E_u5728_u4EE3_u7801_u91CC_u9762"><a href="#u7528svg_u6807_u7B7E_u76F4_u63A5_u653E_u5728_u4EE3_u7801_u91CC_u9762" class="headerlink" title="用svg标签直接放在代码里面"></a>用svg标签直接放在代码里面</h3><ul>
-<li>首先，我们可以在css样式中设置其宽高，因为其有内联样式，所以，在设置之后加上<code>!important</code>就行了；</li>
-<li>其次，可以使用fill属性来设置其颜色；  </li>
-<li>但是，将图片代码放在HTML中，会毁坏HTML的基本架构</li>
-</ul>
-</li>
-<li>以上的几种方法是基本的引入svg单文件的方法，我们将介绍一个<code>svg sprite</code>技术；就如雪碧图一样将图片放在，然后在页面中引用。</li>
-</ul>
-<h3 id="svg_sprite"><a href="#svg_sprite" class="headerlink" title="svg sprite"></a>svg sprite</h3><p>参考链接： <a href="http://www.w3cplus.com/svg/create-svg-sprite-sheet.html" target="_blank" rel="external">从iconmoon中自动生成svg sprite </a><br>以上讲述了如何生成svg sprite，但是在引入单个文件确定坐标时却不方便，上面生成的图片具有很强的规律，所以并不符合一般引入图片的要求。</p>
-<h3 id="svg"><a href="#svg" class="headerlink" title="svg"></a>svg <symbol></symbol></h3><p><strong>本文建议使用此方法</strong><br>在svg中，我们可以使用<code>&lt;use&gt;</code>标签来引用svg中的一部分，这样就可以合并单文件为雪碧图减少请求数并且很方便的引用其中的某个图片。<br>可以这样说，<code>&lt;svg&gt;</code>标签中有多个<code>&lt;symbol&gt;</code>标签，每个<code>&lt;symbol&gt;</code>标签都表示一个svg图片。<br>具体的实现方法如下：</p>
-<ul>
-<li>如本文第一部分所示，下载图片到本地</li>
-<li>使用前端自动化构建工具grunt将所有的svg单图片合成具有<code>symbol</code>标签的sprite图片<ul>
-<li>首先生成package.json文件；</li>
-<li>使用npm下载<code>grunt</code>和<code>grunt-svgstore</code>插件到本地，关于<code>grunt-svgstore</code>，可参考：<a href="https://github.com/FWeinb/grunt-svgstore/" target="_blank" rel="external">https://github.com/FWeinb/grunt-svgstore/</a></li>
-<li>在gruntfile.js文件中配置如下：</li>
-</ul>
-</li>
-</ul>
-<pre><code>        module.exports = function(grunt) {
-        // Project configuration.
-         grunt.initConfig({
-           svgstore: {
-                options: {},
-                //必须加上default，否则生成不了目的文件
-                default : {
-                  files: {
-                    &apos;./dest/dest.svg&apos;: [&apos;./SVG/*.svg&apos;],
-                      },
-                },
-        },
-        });
-              grunt.loadNpmTasks(&apos;grunt-svgstore&apos;);
-              grunt.registerTask(&apos;default&apos;, [&apos;svgstore&apos;]);
-        };
-- 生成的svg sprite的特点：
-    - 首先生成的每个`&lt;symbol&gt;`标签都有对应的ID，默认为图片名，还可以在option中设置前缀  
-    - 使用时可以用css样式定义宽高，填充颜色
-    - 可以使用file形式打开文件，也可以用一个服务器打开
-</code></pre><ul>
-<li><p>在HTML中引入，具体的引入方式有两种如下</p>
-<ul>
-<li><p>第一，将生成的svg标签放在HTML的body元素的最上面，然后最HTML文本中引入如下：   </p>
-<pre><code>&lt;svg&gt;
-&lt;use xlink:href=&quot;#bullhorn&quot;&gt;&lt;/use&gt;
-&lt;/svg&gt;
-</code></pre></li>
-<li>第二种方式直接引用生成的svg sprite里面的内容：</li>
-</ul>
-</li>
-</ul>
-<pre><code>&lt;svg&gt;
-    &lt;use xlink:href=&quot;./dest/dest.svg#bullhorn&quot;&gt;&lt;/use&gt;
-&lt;/svg&gt;
-</code></pre><p>但是这种方式打开文件的时候不能使用file文件形式打开，必须起一个服务器打开，这种方式的引入更加的规范，不会造成HTML文档的结构混乱，建议使用这种方式。<br>这两种方式的引入在设置颜色时，必须确保引入文件的svg中没有对其颜色进行设置，但是往往世事不如人愿，所以现在我的解决方法是将源文件中的fill属性删除，可以使用sublime的快捷选择方式<code>Ctrl+D</code>，这样就可以正常填充属性了。</p>
-<h3 id="svg_u56FE_u7247_u4E0E_u5F53_u524D_u5E76_u5217_u5143_u7D20_u989C_u8272_u540C_u6B65"><a href="#svg_u56FE_u7247_u4E0E_u5F53_u524D_u5E76_u5217_u5143_u7D20_u989C_u8272_u540C_u6B65" class="headerlink" title="svg图片与当前并列元素颜色同步"></a>svg图片与当前并列元素颜色同步</h3><p>当我们在使用图标和字体配合时，我们往往希望在hover上字体时，他们能够一起变色，svg提供了一种非常有用的方式：</p>
-<pre><code>fill=correntColor;
-</code></pre><p>这样可以使的图片可以同相对应字体颜色同步变化。但是必须保证在引用的方式中svg的fill属性在css样式中时可用的。</p>
-<p><strong>参考文献</strong><br>【1】<a href="http://www.runoob.com/svg/svg-inhtml.html" title="菜鸟教程" target="_blank" rel="external">http://www.runoob.com/svg/svg-inhtml.html</a><br>【2】<a href="http://www.zhangxinxu.com/wordpress/2014/07/introduce-svg-sprite-technology/" target="_blank" rel="external">未来必热：SVG Sprite技术介绍</a><br>【3】<a href="https://isux.tencent.com/16292.html" target="_blank" rel="external">使用SVG中的Symbol元素制作Icon</a></p>
-
-          
+          从键入URL到页面加载完毕发生了什么
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/04/12/从键入URL到页面加载完毕发生了什么/">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -406,7 +319,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -447,7 +360,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

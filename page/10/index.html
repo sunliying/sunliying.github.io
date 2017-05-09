@@ -223,8 +223,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/15/setInterval和setTimeout详解/" itemprop="url">
-                  setInterval和setTimeout详解
+                <a class="post-title-link" href="/2017/04/20/数据结构之排序/" itemprop="url">
+                  数据结构之排序
                 </a>
               
             
@@ -237,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-15T12:47:26+08:00" content="2017-04-15">
-              2017-04-15
+            <time itemprop="dateCreated" datetime="2017-04-20T19:57:25+08:00" content="2017-04-20">
+              2017-04-20
             </time>
           </span>
 
@@ -251,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -267,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/04/15/setInterval和setTimeout详解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/15/setInterval和setTimeout详解/" itemprop="commentsCount"></span>
+                <a href="/2017/04/20/数据结构之排序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/20/数据结构之排序/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -290,44 +290,12 @@
 
       
         
-          
-            <p>注意两种函数的<strong>返回值</strong>、<strong>参数</strong>、<strong>this对象指向</strong></p>
-<p>返回值是一个ID，根据此ID号可以用来取消调用<br>参数是一个函数（或字符串）和一个数值时间<br>this对象指向window，非严格模式下   </p>
-<ol>
-<li><p>使用setInterval函数来设置每隔一段时间执行一个函数<br>基本思想： 调用函数，当达到条件时清除ID</p>
-<pre><code>(function(){
-    var num=0;
-    var interId;
-    function func(){
-        num++;
-        console.log(&quot;[&quot;+num+&quot;]&quot;+&quot;  I&apos;am a lovely girl!&quot;);
-
-        if (num&gt;=10) {
-            clearInterval(interId);
-            console.log(&quot;It&apos;s enough!&quot;);
-        }
-    }
-    interId = window.setInterval(func,2000);
-})();
-</code></pre></li>
-<li><p>使用setTimeout函数来设置每隔一段时间执行一个函数；<br>基本思想，首先调用，每次超时继续调用；</p>
-<pre><code>(function(){
-    var num = 0;
-    var max  =10;
-    function func(){
-        num++;
-        console.log(&quot;[&quot;+num+&quot;]&quot;+&quot;  I&apos;am a lovely girl!&quot;);
-        if (num&lt;max) {
-            window.setTimeout(func,1000);
-        }
-    }
-    window.setTimeout(func,1000);
-})();
-</code></pre></li>
-</ol>
-<p>一般认为，使用超时调用来模拟间歇调用是一种最佳模式，在开发环境下，很少使用间歇调用，原因是后一个间歇调用可能会在前一个间歇调用结束之前启动。</p>
-
-          
+          C++ 数据结构
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/04/20/数据结构之排序/">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -351,7 +319,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -392,7 +360,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

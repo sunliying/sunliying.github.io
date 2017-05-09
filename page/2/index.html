@@ -223,8 +223,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/03/输出一个整数数组中出现次数第N多的整数/" itemprop="url">
-                  输出一个整数数组中出现次数第N多的整数
+                <a class="post-title-link" href="/2017/05/05/js闭包/" itemprop="url">
+                  js闭包
                 </a>
               
             
@@ -237,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-03T21:44:03+08:00" content="2017-05-03">
-              2017-05-03
+            <time itemprop="dateCreated" datetime="2017-05-05T09:52:19+08:00" content="2017-05-05">
+              2017-05-05
             </time>
           </span>
 
@@ -251,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔试/" itemprop="url" rel="index">
-                    <span itemprop="name">笔试</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -267,8 +267,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/05/03/输出一个整数数组中出现次数第N多的整数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/03/输出一个整数数组中出现次数第N多的整数/" itemprop="commentsCount"></span>
+                <a href="/2017/05/05/js闭包/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/05/js闭包/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -290,91 +290,12 @@
 
       
         
-          
-            <p>今天进行了CVTE的视频面试，总结一下；</p>
-<ol>
-<li>要掌握好基础</li>
-<li>算法编程一定要认真的分析好思路之后再下手；一定要在思路上走通，分析是很重要的一步</li>
-</ol>
-<p>题目是这样的：</p>
-<pre><code>输出一个整数数组中出现次数第N多的整数。
-2 7 4 10 15 7 2 10 3 7 4
-7   3次
-2   2次
-4   2次  
-10  2次
-15  1次  
-3   1次
-</code></pre><p>编程实现如下：</p>
-<pre><code>var arr = [2,7,4,10,15,7,2,10,3,7,4];
-
-var sortArr = function(arr,index){
-    var sortedArr = [];
-    var indexArr = [];
-    //使用对象对数据进行统计，要记得删除有个为undefined
-    //遍历数组，若存在于对象中，则加一，如果不存在，则将其值设为1；
-    var sortObj = {};
-    for(var i=0;i&lt;arr.length;i++){
-        if(sortObj[arr[i]]===undefined){
-            sortObj[arr[i]]=1;
-        }else{
-            sortObj[arr[i]]++;
-        }
-    }
-    delete sortObj[undefined];
-    //分备用两个数组记录；
-    var j = 0;
-    for(var name in sortObj){
-        indexArr[j]=name;
-        sortedArr[j]=sortObj[name];
-        j++;
-    }
-    //根据其中count的排序，对两个数组进行同步排序；使用的是冒泡排序
-    var spanSort;
-    var spanIndex;
-    for(var k = 0;k&lt;indexArr.length-1;k++){
-        for(var p=0;p&lt;indexArr.length-1-k;p++){
-            if(sortedArr[p]&lt;sortedArr[p+1]){
-                spanSort = sortedArr[p];
-                sortedArr[p] = sortedArr[p+1];
-                sortedArr[p+1]=spanSort;
-                spanIndex = indexArr[p];
-                indexArr[p] = indexArr[p+1];
-                indexArr[p+1]=spanIndex;
-            }
-        }
-    }
-    //对相同的数进行根据顺序的数据统计
-    var indexNum=[];
-    i=0;
-    indexNum[0]=1;
-    for(var s =1;s&lt;sortedArr.length;s++){                
-        if(sortedArr[s]===sortedArr[s-1]){
-            indexNum[i]++;
-        }else{
-            indexNum[++i]=1;
-        }
-    }
-    //寻找在indexArr中出现第n多的数的起始点；
-    var realIndex=0;
-    for(i=0;i&lt;index-1;i++){
-        realIndex +=indexNum[i];
-    }
-    //将得到结果放置在一个数组中返回
-       var returnedArr = [];
-    i=0;
-    for(var q= realIndex;q&lt;realIndex+indexNum[index-1];q++){
-        returnedArr[i]=indexArr[q];
-        i++;
-    }
-
-    return returnedArr;
-};
-var narr = sortArr(arr,2);
-console.log(narr);
-</code></pre><p>这个问题我的解决方案是有些复杂的，同仁，有没有更好的方法呢？</p>
-
-          
+          js闭包
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/05/05/js闭包/">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -398,7 +319,7 @@ console.log(narr);
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -439,7 +360,7 @@ console.log(narr);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
